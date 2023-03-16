@@ -21,9 +21,7 @@
     color: #c7ad7f;
     font-size: 1.3rem;
     font-family: Texto;
-
-
-
+    margin-left: 1rem;
 }
 
 .triangle {
@@ -37,5 +35,20 @@
     margin-bottom: -0.5rem;
 }
 
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-collapse {
+        background-color:#f5fbf9;
+        top: 0.5rem;
+        position: relative;
+       
+    }
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        --bs-gutter-x: 0rem;
+   
+}
+}
+
+  
 
 /*----------------------------------------------*/
