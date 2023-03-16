@@ -1,0 +1,100 @@
+#botonRedes{
+    display: inline-block;
+    width: 5rem;
+  }
+  #social{
+    height: 5rem;
+    width: 5rem;
+
+  }
+.contenedorDerechoUno{
+    margin-top: 8rem;
+  }
+.iconWpp{
+    margin-top: 13px;
+}
+.iconTw{
+    margin-top:7px
+}
+.iconIg{
+    margin-top: 7px;
+    
+}
+#textoConta{
+    font-family: Texto;
+    font-size: 1.3rem;
+}
+.textoConta{
+    margin-top: 3rem;
+}
+#contenedorContacto{
+
+  position: absolute;
+  top: 42%;
+  left: 20rem;
+  z-index: 1;
+  color: #000000;
+  border-radius: 10px;
+  background-color: white;
+}
+
+
+/*--------------Responsive-------------*/
+
+@media screen and (max-width:1700px) {
+  #contenedorContacto{
+    
+    left:20rem;
+    width:60rem;
+  }
+}
+
+@media screen and (max-width:1450px) {
+  #contenedorContacto{
+    width:50rem ;
+    top: 35%;
+  }
+}
+@media screen and (max-width:1200px) {
+  #contenedorContacto{
+   left:15%;
+  }
+}
+@media screen and (max-width:900px) {
+  #contenedorContacto{
+   left:8%;
+
+  }
+}
+@media screen and (max-width:800px) {
+  #contenedorContacto{
+   left:5%;
+  }
+}
+@media screen and (max-width:770px) {
+  #contenedorContacto{
+    top: 10rem;
+   }
+  .contenedorDerechoUno{
+    margin-top: 30rem;
+    margin-left: -30rem;
+    width: 15rem;
+  }
+}
+@media screen and (max-width:576px) {
+  #contenedorContacto{
+    top: 15rem;
+    left: 0%;
+    width: 34rem;
+   }
+  .contenedorDerechoUno{
+    margin-top: 30rem;
+
+    width: 10rem;
+
+  }
+  #textoConta{
+    font-size: 1rem;
+}
+}
+/*-----------------------------------------------*/

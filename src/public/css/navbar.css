@@ -1,0 +1,41 @@
+/*--------------- Diseño del nav------------------*/
+#logoMenu {
+    width: 13rem;
+    margin-top: -0.5rem;
+    margin-left: -0.8rem;
+    margin-bottom: -0.5rem;
+    height: 5.5rem;
+}
+
+.navbar {
+    background-color: #f5fbf9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.5rem;
+    z-index: 9999;
+}
+
+.nav-link {
+    color: #c7ad7f;
+    font-size: 1.3rem;
+    font-family: Texto;
+
+
+
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-left: 100px solid #043343;
+    border-bottom: 6.5rem solid transparent;
+    margin-top: -6rem;
+    margin-left: 12.2rem;
+    margin-bottom: -0.5rem;
+}
+
+
+/*----------------------------------------------*/

@@ -1,0 +1,28 @@
+#logoFooter{
+    height: 9rem;
+    margin-top: 1rem;
+    margin-left: -1rem;
+    border-radius: 7px;
+}
+
+#textoFooter{
+    font-family:Texto;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+}
+#tituloFooter{
+    font-family:Titulo;
+    font-size: 1.8rem;
+    margin-left: -20rem;
+    
+}
+
+/*---respndive---*/
+
+@media screen and (max-width:1020px) {
+    #tituloFooter{
+   
+        margin-left: 0rem;
+    }
+}

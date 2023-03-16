@@ -1,0 +1,23 @@
+.boton-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    color: #fff;
+    border-radius:70px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 3.3rem;
+    width: 3.2rem;
+    z-index: 9999;
+    margin-left: 3rem;
+    
+  }
+  .boton-whatsapp:hover {
+    background-color: #24f01d;
+    
+  }
+  #iconWpp{
+    height: 4rem;
+    width: 3.5rem;
+  }

@@ -1,0 +1,16 @@
+
+
+/*------accordion-----------------------*/
+button.accordion-button:focus, 
+button.accordion-button:active {
+  background-color: #043343 !important; /* Cambiar el color de fondo */
+  color: #fff !important; /* Cambiar el color del texto */
+
+}
+
+button.accordion-button {
+    background-color: #f5fbf9 !important; /* Cambiar el color de fondo */
+    color: #171616 !important; /* Cambiar el color del texto */
+  
+  }
+
