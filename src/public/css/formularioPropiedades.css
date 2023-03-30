@@ -1,0 +1,36 @@
+.formularioPropiedades {
+    margin-top: 5rem;
+}
+
+.inputImage {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.divImage {
+    position: relative;
+    z-index: 0;
+    background-image: url('/image/upload.png');
+    background-size: cover;
+    border-radius: 20px;
+    height: 80px;
+    width: 80px;
+}
+
+.form-group {
+    margin-top: 0.4rem;
+}
+
+input.form-control:focus {
+    outline-color: red;
+  }
+
+  .imagenes{
+    margin-left: 1rem;
+  }
+  

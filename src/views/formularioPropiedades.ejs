@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    
+</head>
+<body>
+    <div class="container p-4 formularioPropiedades">
+        <div class="row">
+            <div class="col-md-7 offset-md-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Formulario Propiedades</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/agregar/propiedades" method="POST" enctype="multipart/form-data">
+                            <div class="input-group mb-3">
+                             
+
+                                 <div class="form-group">
+                                    <div style="position: relative;">
+                                      <input type="file" name="image" class="form-control-file inputImage" id="exampleFormControlFile1">
+                                      <div class="divImage"></div>
+                                    </div>
+                                  </div>
+                                
+                                  
+                                  
+                            </div>
+
+                            <div class="form-group">
+                                <select class="form-select" aria-label="Default select example" id="inputCiudadLine2" name="titulo">
+                                    <option selected>Tipo de inmueble en venta</option>
+                                    <option value="Apartamento">Apartamento en venta</option>
+                                    <option value="Casa">Casa en venta</option>
+                                    <option value="Oficina">Oficina en venta</option>
+                                    <option value="Local">Local en venta</option>
+                                    <option value="Bodegas">Bodegas en venta</option>
+                                    <option value="Lotes">Lotes en venta</option>
+                                    <option value="Fincas">Fincas en venta</option>
+                                    <option value="Edif. oficinas">Edif. oficinas en venta</option>
+                                    <option value="Consultorios">Consultorios en venta</option>
+                                    <option value="Edif. Apartamentos">Edif. Apartamentos en venta</option>
+                                    
+                                    
+                                </select>
+                            </div>
+
+                        
+                            <div class="form-group">
+                                
+                                        <select class="form-select" aria-label="Default select example" id="inputCiudadLine2" name="ciudad">
+                                            <option selected>Ciudad</option>
+                                            <option value="Arauca">Arauca</option>
+                                            <option value="Armenia">Armenia</option>
+                                            <option value="Barranquilla">Barranquilla</option>
+                                            <option value="Bogotá">Bogotá</option>
+                                            <option value="Bucaramanga">Bucaramanga</option>
+                                            <option value="Cali">Cali</option>
+                                            <option value="Cartagena">Cartagena</option>
+                                            <option value="Cúcuta">Cúcuta</option>
+                                            <option value="Florencia">Florencia</option>
+                                            <option value="Ibagué">Ibagué</option>
+                                            <option value="Leticia">Leticia</option>
+                                            <option value="Manizales">Manizales</option>
+                                            <option value="Medellín">Medellín</option>
+                                            <option value="Mitú">Mitú</option>
+                                            <option value="Mocoa">Mocoa</option>
+                                            <option value="Montería">Montería</option>
+                                            <option value="Neiva">Neiva</option>
+                                            <option value="Pasto">Pasto</option>
+                                            <option value="Pereira">Pereira</option>
+                                            <option value="Popayán">Popayán</option>
+                                            <option value="Puerto Carreño">Puerto Carreño</option>
+                                            <option value="Puerto Inírida">Puerto Inírida</option>
+                                            <option value="Quibdó">Quibdó</option>
+                                            <option value="Riohacha">Riohacha</option>
+                                            <option value="San Andrés">San Andrés</option>
+                                            <option value="San José del Guaviare">San José del Guaviare</option>
+                                            <option value="Santa Marta">Santa Marta</option>
+                                            <option value="Sincelejo">Sincelejo</option>
+                                            <option value="Tunja">Tunja</option>
+                                            <option value="Valledupar">Valledupar</option>
+                                            <option value="Villavicencio">Villavicencio</option>
+                                            <option value="Yopal">Yopal</option>
+                                        </select>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" maxlength="30" name="direccion" placeholder="Direccion" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" maxlength="12" name="barrio" placeholder="Barrio" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" name="precio" placeholder="Precio" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" name="area" placeholder="Area m²" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" name="habitaciones" placeholder="Habitaciones" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" name="banos" placeholder="Baños" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" name="parqueadero" placeholder="Parqueadero" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" name="estrato" placeholder="Estrato" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <textarea maxlength="150" name="zonasComunes" placeholder="Zonas comunes" class="form-control"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea maxlength="300" name="descripcion" placeholder="Descripcion" class="form-control"></textarea>
+                            </div>
+
+
+                           
+
+                            <div class="form-group">
+                                <input type="number" name="cedulaPropietario" placeholder="Cedula Propietario" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="nombrePropietario" placeholder="Nombre Propietario" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" name="telefonoPropietario" placeholder="Telefono Propietario" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" name="correoPropietario" placeholder="Correo Propietario" class="form-control">
+                            </div>
+
+                            
+
+
+
+                          
+                            <div class="form-group">
+                                <button class="btn btn-success btn-block">
+                                    Upload
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+   
+   
+
+    <%- include("../widgets/body")%>
+</body>
+</html>

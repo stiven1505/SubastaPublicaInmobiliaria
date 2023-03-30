@@ -1,0 +1,23 @@
+.tarjeta{
+    margin-top: 8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.textoPropiedad{
+    width: 10rem;
+}
+
+button.prueba:focus, 
+button.prueba:active {
+  background-color: #f1f4f5 !important; /* Cambiar el color de fondo */
+  color: #040404 !important; /* Cambiar el color del texto */
+
+}
+
+button.prueba {
+    background-color: #f5fbf9 !important; /* Cambiar el color de fondo */
+    color: #171616 !important; /* Cambiar el color del texto */
+  
+  }
+

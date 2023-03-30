@@ -4,12 +4,175 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 
 </head>
 <body>
 
    <%- include("../widgets/body")%>
+
+
+
+
+
+
+   <div class="row tarjeta">
+      <% propiedad.forEach(function(datosPropiedad, index) { %>
+        <div class="col-md-5 col-lg-4">
+          <div class="card" style="margin-top:2rem;">
+            <div id="carouselExample<%= index %>" class="carousel slide">
+              
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="<%= datosPropiedad.imageURL %>" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="<%= datosPropiedad.imageURL %>" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="/image/2.PNG" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample<%= index %>" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample<%= index %>" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+       
+      
+      
+          <div class="card-body">
+            <table class="table">
+              <tr>
+                <th colspan="6" ><%= datosPropiedad.titulo %></th>
+               
+              </tr>
+             
+                <tr>
+                  <th scope="col" class="table-active">Ciudad </th>
+                  <td colspan="1"><p class="text-break"><%= datosPropiedad.ciudad%></p></td>
+                  <th scope="col"  class="table-active">Dir.</th>
+                  <td colspan="3"><p class="text-break"><%= datosPropiedad.direccion%></p></td>
+                 
+                  
+                </tr>
+                <tr>
+                  <th scope="row" class="table-active">Barrio </th>
+                  <td ><p class="text-break"><%= datosPropiedad.barrio%></p></td>
+                  <th scope="row" class="table-active">Estrato </th>
+                  <td><%= datosPropiedad.estrato %></td>
+                  <th scope="row" class="table-active">Hab.</th>
+                  <td><%= datosPropiedad.habitaciones %></td>
+                </tr>
+                <tr>
+                  <th scope="row" colspan="1" class="table-active">Area </th>
+                  <td><%= datosPropiedad.area %></td>
+
+                  <th scope="row" class="table-active">Baños </th>
+                  <td><%= datosPropiedad.banos %></td>
+                  <th scope="row" class="table-active">Parq. </th>
+                  <td><%= datosPropiedad.parqueadero %></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">
+                    
+                  <div class="accordion accordion-flush " id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed prueba" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<%= index %>" aria-expanded="false" aria-controls="flush-collapse<%= index %>">
+                          Zonas Comunes
+                        </button>
+                      </h2>
+                      <div id="flush-collapse<%= index %>" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                        <div>
+                        
+                        <p class="text-break"><%= datosPropiedad.zonasComunes %></p>
+                        </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed prueba" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<%= index %>" aria-expanded="false" aria-controls="flush-collapse<%= index %>">
+                          Descripcion
+                        </button>
+                      </h2>
+                      <div id="flush-collapse<%= index %>" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          <div >
+                            <p class="text-break"><%= datosPropiedad.descripcion %></p>
+
+                          </div>
+                          
+                        </div>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                  </td>
+                </tr>
+               
+                
+                
+              
+            </table>
+            
+            
+            
+            
+            
+            <div class="container ">
+              <div class="row flex flex-row justify-content-center">
+                <div class="col">
+                  <a href="https://api.whatsapp.com/send?phone=+573154057736&text=%C2%A1Hola!%20Me%20interesa%20la%20propiedad%20<%= datosPropiedad.titulo %>:%0A
+                    Ciudad: <%= datosPropiedad.ciudad %>%0A Dirección: <%= datosPropiedad.direccion %>
+                    %0A Barrio: <%= datosPropiedad.barrio %> %0A Estrato: <%= datosPropiedad.Estrato %>
+                    %0A Habitaciones: <%= datosPropiedad.habitaciones %> %0A Área: <%= datosPropiedad.area %>
+                    %0A Precio: <%= datosPropiedad.precio %> 
+                    %0A%0APara más información, el ID de la propiedad es <%= datosPropiedad._id %>." class="btn btn-primary" style="background-color: #043343;">Me interesa</a>
+                </div>
+                <div class="col text-right">
+                  <p><%= datosPropiedad.precio %></p>
+                </div>
+                
+              </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+           
+
+               
+
+
+          </div>
+        </div>
+      
+   
+  
+    <% }); %>
+  </div>
+  </div>
+</div>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
    <%- include("../widgets/Footer/index")%>
 </body>
 </html>
