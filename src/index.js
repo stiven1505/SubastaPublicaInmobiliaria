@@ -26,7 +26,7 @@ const storage = multer.diskStorage({
         cb(null,new Date().getTime() + path.extname(file.originalname))//guarda la imagen con el la funcion Date con el tiempo de subida en milisegundo que lo vuelve en teoria un numero unico, ademas con su extencion se agrega con path.extname
     }
 });
-app.use(multer({storage}).single('image'));//revisa si cada vez que manden un dato tiene el nombre image
+app.use(multer({storage}).array('image'));//revisa si cada vez que manden un dato tiene el nombre image
 app.use(indexRoutes) //utilizar los routers 
 
 export default app;

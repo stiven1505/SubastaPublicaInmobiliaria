@@ -25,9 +25,13 @@ const propiedades = new Schema({
     
     /* Manejo de imagenes */
 
-      imageURL:{type:String},
-      public_id:{type:String},
-      size: { type: Number},
+    image: [
+      {
+        url: String,
+        public_id: String,
+        size: Number,
+      },
+    ],
 
 
 

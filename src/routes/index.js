@@ -41,55 +41,50 @@ router.get('/formularioPropiedades',(req,res)=>res.render('formularioPropiedades
 router.post('/agregar/propiedades',async(req,res)=>{
     // el try-catch se usa para envolver la promesa que hace cuando se llama fs.unlink 
     try{
-    const imagen = await cloudinary.v2.uploader.upload(req.file.path, { width:1600, height:750 });
-    const datos = req.body;  
+        const imagenes = []
+        const datos = req.body;
+        // se hace un bucle donde va a guardar cada una de la imagenes en cloudinary y se ira guardando en el arreglo imagenes con sus respetivos datos y luego se enviaran a la base de datos 
+        for (const file of req.files) {
+        const imagen = await cloudinary.v2.uploader.upload(file.path, { width:1600, height:750 });//subida a cloudinary
+        imagenes.push({//guarda en arreglo 
+            url: imagen.secure_url,
+            public_id: imagen.public_id,
+            size: imagen.bytes
+        });
+        }
 
-console.log(imagen);
+const newPropiedad =  new Propiedades({
+  /*Datos para vista publica*/
+  titulo : datos.titulo ,
+  ciudad :  datos.ciudad ,
+  direccion :  datos.direccion ,
+  barrio :  datos.barrio ,
+  precio :  datos.precio ,
+  area :  datos.area ,
+  habitaciones :  datos.habitaciones ,
+  banos :  datos.banos ,
+  parqueadero :  datos.parqueadero ,
+  estrato :  datos.estrato ,
+  zonasComunes :  datos.zonasComunes ,
+  descripcion : datos.descripcion ,
+  /* Manejo de imagenes */
+  image: imagenes,
+  /*Datos Manejo interno*/
+  cedulaPropietario: datos.cedulaPropietario,
+  nombrePropietario: datos.nombrePropietario,
+  telefonoPropietario: datos.telefonoPropietario,
+  correoPropietario: datos.correoPropietario,
+});
 
+await newPropiedad.save();
+for (const file of req.files) {
+  await fs.unlink(file.path);
+}
 
-   const newPropiedad =  new Propiedades({
-  
-    /*Datos para vista publica*/
-
-    
-    titulo : datos.titulo ,
-    ciudad :  datos.ciudad ,
-    direccion :  datos.direccion ,
-    barrio :  datos.barrio ,
-    precio :  datos.precio ,
-    area :  datos.area ,
-    habitaciones :  datos.habitaciones ,
-    banos :  datos.banos ,
-    parqueadero :  datos.parqueadero ,
-    estrato :  datos.estrato ,
-    zonasComunes :  datos.zonasComunes ,
-    descripcion :  datos.descripcion ,
-
-
-     /* Manejo de imagenes */
-
-     imageURL: imagen.url,
-     public_id: imagen.public_id ,
-     size: imagen.size ,
-
-     /*Datos Manejo interno*/
-    cedulaPropietario: datos.cedulaPropietario,
-    nombrePropietario: datos.nombrePropietario,
-    telefonoPropietario: datos.telefonoPropietario,
-    correoPropietario: datos.correoPropietario,
-
-
-            
-        }); 
-
-
-        await newPropiedad.save();
-        await fs.unlink(req.file.path);
-
-        res.redirect("back");
+res.redirect("back");
 
     } catch (e){
-        console.error('Error uploading or deleting local file:', err);
+        console.error('Error uploading or deleting local file:', e);
         res.status(500).send('Error uploading or deleting local file');
     }
 }
