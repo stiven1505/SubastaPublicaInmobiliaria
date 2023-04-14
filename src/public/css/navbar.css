@@ -1,14 +1,17 @@
 /*--------------- Diseño del nav------------------*/
 #logoMenu {
-    width: 13rem;
     margin-top: -0.5rem;
     margin-left: -0.8rem;
     margin-bottom: -0.5rem;
     height: 5.5rem;
 }
 
+#logoMenu2 {
+    display: none;
+}
+
 .navbar {
-    background-color: #f5fbf9;
+    background-color: #f5fbf9 !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,9 +22,20 @@
 
 .nav-link {
     color: #c7ad7f;
-    font-size: 1.3rem;
+    font-size: 90%;
     font-family: Texto;
     margin-left: 1rem;
+}
+
+.cuadrado {
+    width: 26rem;
+    height: 5.5rem;
+    background-color: #043343;
+    color: #c7ad7f;
+}
+
+#barraTitulo {
+    font-size: 2rem;
 }
 
 .triangle {
@@ -31,24 +45,59 @@
     border-left: 100px solid #043343;
     border-bottom: 6.5rem solid transparent;
     margin-top: -6rem;
-    margin-left: 12.2rem;
+    margin-left: 31.3em;
     margin-bottom: -0.5rem;
 }
 
 
-@media (max-width: 991.98px) {
-    .navbar .navbar-collapse {
-        background-color:#f5fbf9;
-        top: 0.5rem;
-        position: relative;
-       
+@media (max-width: 630px) {
+    .triangle {
+        display: none;
     }
-    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        --bs-gutter-x: 0rem;
-   
-}
+
 }
 
-  
+@media (max-width: 553px) {
+    #logoMenu {
+        display: none;
+    }
+
+    #logoMenu2 {
+        display: block;
+        margin-top: -0.5rem;
+        margin-bottom: -0.5rem;
+        height: 5.55rem;
+        width: 9.5rem;
+        
+    }
+    .triangle{
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 0px solid transparent;
+        border-left: 100px solid #043343;
+        border-bottom: 6.1rem solid transparent;
+        margin-top: -6rem;
+        margin-left: 9.4rem;
+        margin-bottom: -0.5rem;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-collapse {
+        background-color: #f5fbf9;
+        top: 0.5rem;
+        position: relative;
+
+    }
+
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        --bs-gutter-x: 0rem;
+
+    }
+}
+
+
 
 /*----------------------------------------------*/

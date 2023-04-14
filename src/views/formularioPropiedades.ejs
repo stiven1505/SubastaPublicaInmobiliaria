@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <link rel="shortcut icon" type="image/png" href="/image/logoPequeno.jpg">
     
 </head>
 <body>
@@ -121,8 +122,51 @@
                                 <input type="number" name="estrato" placeholder="Estrato" class="form-control">
                             </div>
 
+                            <div class="form-group">zonas comunes </div>
                             <div class="form-group">
-                                <textarea maxlength="150" name="zonasComunes" placeholder="Zonas comunes" class="form-control"></textarea>
+                                 <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="ascensor" value="ascensor">
+                                    <label class="form-check-label" for="ascensor">ascensor</label>
+                                 </div>
+                                 <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="azotea" value="azotea">
+                                    <label class="form-check-label" for="azotea">azotea</label>
+                                  </div>
+                                 <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="gimnasio" value="gimnasio">
+                                    <label class="form-check-label" for="gimnasio">gimnasio</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="bodega" value="bodega">
+                                    <label class="form-check-label" for="bodega">bodega</label>
+                                  </div>
+                                  
+                                  <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="lavanderia" value="lavanderia">
+                                    <label class="form-check-label" for="lavanderia">lavanderia</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="piscina" value="piscina">
+                                    <label class="form-check-label" for="piscina">piscina</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="sala reuniones" value="sala reuniones">
+                                    <label class="form-check-label" for="sala reuniones">sala reuniones</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="salon de ventas" value="salon de ventas">
+                                    <label class="form-check-label" for="salon de ventas">salon de ventas</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="zona juegos" value="zona juegos">
+                                    <label class="form-check-label" for="zona juegos">zona juegos</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="zona de BBQ" value="zona de BBQ">
+                                    <label class="form-check-label" for="zona de BBQ">zona de BBQ</label>
+                                  </div>
+
+
                             </div>
 
                             <div class="form-group">
@@ -155,7 +199,7 @@
                           
                             <div class="form-group">
                                 <button class="btn btn-success btn-block">
-                                    Upload
+                                    Registrar
                                 </button>
                             </div>
                         </form>

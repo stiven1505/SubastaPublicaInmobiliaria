@@ -19,7 +19,13 @@ const propiedades = new Schema({
     banos: {type: String},
     parqueadero: {type: String},
     estrato: {type: String},
-    zonasComunes: {type: String},
+    
+    zonasComunes: {
+      type: [String], // tipo de campo es un arreglo de strings
+      enum: ['ascensor','azotea', 'gimnasio', 'bodega', 'lavanderia', 'piscina', 'sala reuniones', 'salon de ventas', 'zona juegos','zona de BBQ'], // opciones permitidas para el arreglo
+      default: ['Sin información'], // valor por defecto si no se selecciona ningún checkbox
+    },
+
     descripcion: {type: String},
 
     
@@ -62,7 +68,7 @@ const propiedades = new Schema({
 });
 
 
-// Agregar el campo autoincrementable a la propiedad "codigo"
+
 
 
 

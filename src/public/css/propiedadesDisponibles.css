@@ -1,7 +1,9 @@
 .tarjeta{
-    margin-top: 8rem;
-    margin-left: 1rem;
+    margin-top: 5rem;
+    margin-left: 11rem;
     margin-right: 1rem;
+    position: relative;
+    font-size: 13px;
 }
 
 .textoPropiedad{
@@ -10,14 +12,77 @@
 
 button.prueba:focus, 
 button.prueba:active {
-  background-color: #f1f4f5 !important; /* Cambiar el color de fondo */
+  background-color: #f5fbf9!important; /* Cambiar el color de fondo */
   color: #040404 !important; /* Cambiar el color del texto */
-
 }
 
 button.prueba {
     background-color: #f5fbf9 !important; /* Cambiar el color de fondo */
     color: #171616 !important; /* Cambiar el color del texto */
+    height: 2.7rem;
+    font-size: 13px;
+    border-radius: 23px;
   
   }
 
+  #datosUbicacion{
+    display: inline-block;
+  }
+  #datosUbicacion-area{
+    float: right;
+  }
+
+
+/*BARRA DE FILTROS */
+
+
+.barra-lateral {
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  width: 170px;
+  height: 100%;
+  padding: 20px;
+  background-color: #f5fbf9;
+  border-right: 1px solid #ddd;
+}
+
+.precio{
+  text-align: right;
+}
+.propiedadesDisponibles{
+  text-transform: capitalize;
+  background-image: url(../image/fondoP.jp);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
+  
+
+}
+.cardPropiedades{
+  background-color: white;
+  
+  border-radius: 10px;
+}
+.btnInteresado{
+  margin-bottom: 1rem;
+}
+tr{
+  border: none !important;
+  border-style: none !important;
+  border-color: transparent !important;
+}
+table{
+  line-height: 0.1rem;
+}
+/*ICONOS*/
+span{
+  font-size: 17px !important;
+}
+
+@media screen and (max-width:1064px) {
+  .btnInteresado{
+    font-size: 13px;
+  }
+
+}
