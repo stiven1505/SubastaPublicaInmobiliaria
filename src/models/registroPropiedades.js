@@ -1,10 +1,5 @@
 import mongoose, { Schema, model } from 'mongoose';
 
-
-
-
-
-
 const propiedades = new Schema({
 
   /*Datos para vista publica*/

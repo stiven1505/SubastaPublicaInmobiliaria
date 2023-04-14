@@ -1,61 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="/image/logoPequeno.jpg">
-    <title><%= title %></title>
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png"
+    href="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681484840/Pagina%20SPI/logoPequeno_udcoyg.jpg">
+  <title>
+    <%= title %>
+  </title>
+
 </head>
-<body >
-    <img src="/image/contacto.png" class="img-fluid" id="imagenIndexPrincipal"alt="...">
-    
-    
-    <div class="container text" id="contenedorContacto">
+
+<body>
+  <img src="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681482962/Pagina%20SPI/contacto_rgwals.png"
+    class="img-fluid" id="imagenIndexPrincipal" alt="...">
+
+
+  <div class="container text" id="contenedorContacto">
+    <div class="row align-items">
+      <div class="col">
+        <img src="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681482962/Pagina%20SPI/logoClaro_g18rcj.jpg"
+          class="img-fluid" alt="...">
+      </div>
+      <div class="col contenedorDerechoUno">
+
+
         <div class="row align-items">
-          <div class="col">
-            <img src="/image/logoClaro.jpg" class="img-fluid" alt="...">
-          </div>
-          <div class="col contenedorDerechoUno">
-            
-           
-            <div class="row align-items">
-                <div class="col ">
-                    <a href="https://api.whatsapp.com/send?phone=573136696968" target="_blank" id="botonRedes">
-                        <img src="/image/wpp.png"  id="social" class="iconWpp" alt="...">  </a>
-                    
-                     <a href="https://api.whatsapp.com/send?phone=573136696968" target="_blank"id="botonRedes" >
-                         <img src="/image/fb.png" class="img-fluid" id="social" alt="...">  </a>
+          <div class="col ">
+            <a href="https://api.whatsapp.com/send?phone=573136696968" target="_blank" id="botonRedes">
+              <img src="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681482963/Pagina%20SPI/wpp_v9ethw.png"
+                id="social" class="iconWpp" alt="..."> </a>
 
-                     <a href="https://api.whatsapp.com/send?phone=573136696968" target="_blank"id="botonRedes" >
-                         <img src="/image/twitter.png" class="img-fluid iconTw" id="social" alt="...">  </a>
+            <a href="https://api.whatsapp.com/send?phone=573136696968" target="_blank" id="botonRedes">
+              <img src="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681482962/Pagina%20SPI/fb_tgriyg.png"
+                class="img-fluid" id="social" alt="..."> </a>
 
-                     <a href="https://api.whatsapp.com/send?phone=573136696968" target="_blank" id="botonRedes">
-                            <img src="/image/instagram.png" class="img-fluid iconIg" id="social" alt="...">  </a>
+            <a href="https://api.whatsapp.com/send?phone=573136696968" target="_blank" id="botonRedes">
+              <img src="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681482962/Pagina%20SPI/twitter_cm3bhs.png"
+                class="img-fluid iconTw" id="social" alt="..."> </a>
+
+            <a href="https://api.whatsapp.com/send?phone=573136696968" target="_blank" id="botonRedes">
+              <img src="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681482962/Pagina%20SPI/instagram_pfnlzv.png"
+                class="img-fluid iconIg" id="social" alt="..."> </a>
 
 
-
-                        
-                </div>
-             </div>
-            
-             <div class="row align-items textoConta">
-                <div class="col">
-                 <p align="left" id="textoConta">E-mail: porsubien.com@gmail.com</p>
-                 <p align="left" id="textoConta">Direccion: Av 4N #6N-67. Torre Empresarial Siglo XXI.  Ofic. 608 Centenario, Cali </p>
-                </div>
-             </div>
-
-           
 
 
           </div>
-         
         </div>
+
+        <div class="row align-items textoConta">
+          <div class="col">
+            <p align="left" id="textoConta">E-mail: porsubien.com@gmail.com</p>
+            <p align="left" id="textoConta">Direccion: Av 4N #6N-67. Torre Empresarial Siglo XXI. Ofic. 608 Centenario,
+              Cali </p>
+          </div>
+        </div>
+
+
+
+
       </div>
 
+    </div>
+  </div>
 
-    <%- include("../widgets/body") %>
+
+  <%- include("../widgets/body") %>
 </body>
+
 </html>

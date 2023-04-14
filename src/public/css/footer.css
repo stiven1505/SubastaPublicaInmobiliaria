@@ -1,28 +1,41 @@
-#logoFooter{
+#logoFooter {
     height: 9rem;
     margin-top: 1rem;
     margin-left: -1rem;
     border-radius: 7px;
 }
 
-#textoFooter{
-    font-family:Texto;
+#textoFooter {
+    font-family: Texto;
     font-size: 1.2rem;
     text-decoration: none;
     color: white;
+    text-transform: none;
 }
-#tituloFooter{
-    font-family:Titulo;
+
+#tituloFooter {
+    font-family: Titulo;
     font-size: 1.8rem;
     margin-left: -20rem;
-    
+
+}
+
+.bodyContacto {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0px;
+    color: white;
+    max-width: 100%;
+    background-color: #043343;
 }
 
 /*---respndive---*/
 
 @media screen and (max-width:1020px) {
-    #tituloFooter{
-   
+    #tituloFooter {
+
         margin-left: 0rem;
     }
 }

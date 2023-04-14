@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="shortcut icon" type="image/png" href="/image/logoPequeno.jpg">
-    
+    <title>
+        <%= title %>
+    </title>
+    <link rel="shortcut icon" type="image/png"
+        href="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681484840/Pagina%20SPI/logoPequeno_udcoyg.jpg">
+
 </head>
+
 <body>
     <div class="container p-4 formularioPropiedades">
         <div class="row">
@@ -19,21 +24,23 @@
                     <div class="card-body">
                         <form action="/agregar/propiedades" method="POST" enctype="multipart/form-data">
                             <div class="input-group mb-3">
-                             
 
-                                 <div class="form-group">
+
+                                <div class="form-group">
                                     <div style="position: relative;">
-                                      <input type="file" name="image" class="form-control-file inputImage" id="exampleFormControlFile1" multiple>
-                                      <div class="divImage"></div>
+                                        <input type="file" name="image" class="form-control-file inputImage"
+                                            id="exampleFormControlFile1" multiple>
+                                        <div class="divImage"></div>
                                     </div>
-                                  </div>
-                                
-                                  
-                                  
+                                </div>
+
+
+
                             </div>
 
                             <div class="form-group">
-                                <select class="form-select" aria-label="Default select example" id="inputCiudadLine2" name="titulo">
+                                <select class="form-select" aria-label="Default select example" id="inputCiudadLine2"
+                                    name="titulo">
                                     <option selected>Tipo de inmueble en venta</option>
                                     <option value="Apartamento en venta">Apartamento en venta</option>
                                     <option value="Casa en venta">Casa en venta</option>
@@ -45,57 +52,60 @@
                                     <option value="Edif. oficinas en venta">Edif. oficinas en venta</option>
                                     <option value="Consultorios en venta">Consultorios en venta</option>
                                     <option value="Edif. Apartamentos en venta">Edif. Apartamentos en venta</option>
-                                    
-                                    
+
+
                                 </select>
                             </div>
 
-                        
+
                             <div class="form-group">
-                                
-                                        <select class="form-select" aria-label="Default select example" id="inputCiudadLine2" name="ciudad">
-                                            <option selected>Ciudad</option>
-                                            <option value="Arauca">Arauca</option>
-                                            <option value="Armenia">Armenia</option>
-                                            <option value="Barranquilla">Barranquilla</option>
-                                            <option value="Bogotá">Bogotá</option>
-                                            <option value="Bucaramanga">Bucaramanga</option>
-                                            <option value="Cali">Cali</option>
-                                            <option value="Cartagena">Cartagena</option>
-                                            <option value="Cúcuta">Cúcuta</option>
-                                            <option value="Florencia">Florencia</option>
-                                            <option value="Ibagué">Ibagué</option>
-                                            <option value="Leticia">Leticia</option>
-                                            <option value="Manizales">Manizales</option>
-                                            <option value="Medellín">Medellín</option>
-                                            <option value="Mitú">Mitú</option>
-                                            <option value="Mocoa">Mocoa</option>
-                                            <option value="Montería">Montería</option>
-                                            <option value="Neiva">Neiva</option>
-                                            <option value="Pasto">Pasto</option>
-                                            <option value="Pereira">Pereira</option>
-                                            <option value="Popayán">Popayán</option>
-                                            <option value="Puerto Carreño">Puerto Carreño</option>
-                                            <option value="Puerto Inírida">Puerto Inírida</option>
-                                            <option value="Quibdó">Quibdó</option>
-                                            <option value="Riohacha">Riohacha</option>
-                                            <option value="San Andrés">San Andrés</option>
-                                            <option value="San José del Guaviare">San José del Guaviare</option>
-                                            <option value="Santa Marta">Santa Marta</option>
-                                            <option value="Sincelejo">Sincelejo</option>
-                                            <option value="Tunja">Tunja</option>
-                                            <option value="Valledupar">Valledupar</option>
-                                            <option value="Villavicencio">Villavicencio</option>
-                                            <option value="Yopal">Yopal</option>
-                                        </select>
+
+                                <select class="form-select" aria-label="Default select example" id="inputCiudadLine2"
+                                    name="ciudad">
+                                    <option selected>Ciudad</option>
+                                    <option value="Arauca">Arauca</option>
+                                    <option value="Armenia">Armenia</option>
+                                    <option value="Barranquilla">Barranquilla</option>
+                                    <option value="Bogotá">Bogotá</option>
+                                    <option value="Bucaramanga">Bucaramanga</option>
+                                    <option value="Cali">Cali</option>
+                                    <option value="Cartagena">Cartagena</option>
+                                    <option value="Cúcuta">Cúcuta</option>
+                                    <option value="Florencia">Florencia</option>
+                                    <option value="Ibagué">Ibagué</option>
+                                    <option value="Leticia">Leticia</option>
+                                    <option value="Manizales">Manizales</option>
+                                    <option value="Medellín">Medellín</option>
+                                    <option value="Mitú">Mitú</option>
+                                    <option value="Mocoa">Mocoa</option>
+                                    <option value="Montería">Montería</option>
+                                    <option value="Neiva">Neiva</option>
+                                    <option value="Pasto">Pasto</option>
+                                    <option value="Pereira">Pereira</option>
+                                    <option value="Popayán">Popayán</option>
+                                    <option value="Puerto Carreño">Puerto Carreño</option>
+                                    <option value="Puerto Inírida">Puerto Inírida</option>
+                                    <option value="Quibdó">Quibdó</option>
+                                    <option value="Riohacha">Riohacha</option>
+                                    <option value="San Andrés">San Andrés</option>
+                                    <option value="San José del Guaviare">San José del Guaviare</option>
+                                    <option value="Santa Marta">Santa Marta</option>
+                                    <option value="Sincelejo">Sincelejo</option>
+                                    <option value="Tunja">Tunja</option>
+                                    <option value="Valledupar">Valledupar</option>
+                                    <option value="Villavicencio">Villavicencio</option>
+                                    <option value="Yopal">Yopal</option>
+                                </select>
                             </div>
 
                             <div class="form-group">
-                                <input type="text" maxlength="30" name="direccion" placeholder="Direccion" class="form-control">
+                                <input type="text" maxlength="30" name="direccion" placeholder="Direccion"
+                                    class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <input type="text" maxlength="12" name="barrio" placeholder="Barrio" class="form-control">
+                                <input type="text" maxlength="12" name="barrio" placeholder="Barrio"
+                                    class="form-control">
                             </div>
 
                             <div class="form-group">
@@ -107,7 +117,8 @@
                             </div>
 
                             <div class="form-group">
-                                <input type="number" name="habitaciones" placeholder="Habitaciones" class="form-control">
+                                <input type="number" name="habitaciones" placeholder="Habitaciones"
+                                    class="form-control">
                             </div>
 
                             <div class="form-group">
@@ -124,79 +135,94 @@
 
                             <div class="form-group">zonas comunes </div>
                             <div class="form-group">
-                                 <div class="form-check form-check-inline">
-                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="ascensor" value="ascensor">
+                                <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="ascensor"
+                                        value="ascensor">
                                     <label class="form-check-label" for="ascensor">ascensor</label>
-                                 </div>
-                                 <div class="form-check form-check-inline">
-                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="azotea" value="azotea">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="azotea"
+                                        value="azotea">
                                     <label class="form-check-label" for="azotea">azotea</label>
-                                  </div>
-                                 <div class="form-check form-check-inline">
-                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="gimnasio" value="gimnasio">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="gimnasio"
+                                        value="gimnasio">
                                     <label class="form-check-label" for="gimnasio">gimnasio</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="bodega" value="bodega">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="bodega"
+                                        value="bodega">
                                     <label class="form-check-label" for="bodega">bodega</label>
-                                  </div>
-                                  
-                                  <div class="form-check form-check-inline">
-                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="lavanderia" value="lavanderia">
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox"
+                                        id="lavanderia" value="lavanderia">
                                     <label class="form-check-label" for="lavanderia">lavanderia</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="piscina" value="piscina">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="piscina"
+                                        value="piscina">
                                     <label class="form-check-label" for="piscina">piscina</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="sala reuniones" value="sala reuniones">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox"
+                                        id="sala reuniones" value="sala reuniones">
                                     <label class="form-check-label" for="sala reuniones">sala reuniones</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="salon de ventas" value="salon de ventas">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox"
+                                        id="salon de ventas" value="salon de ventas">
                                     <label class="form-check-label" for="salon de ventas">salon de ventas</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="zona juegos" value="zona juegos">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox"
+                                        id="zona juegos" value="zona juegos">
                                     <label class="form-check-label" for="zona juegos">zona juegos</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="zona de BBQ" value="zona de BBQ">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input name="zonasComunes[]" class="form-check-input" type="checkbox"
+                                        id="zona de BBQ" value="zona de BBQ">
                                     <label class="form-check-label" for="zona de BBQ">zona de BBQ</label>
-                                  </div>
+                                </div>
 
 
                             </div>
 
                             <div class="form-group">
-                                <textarea maxlength="300" name="descripcion" placeholder="Descripcion" class="form-control"></textarea>
+                                <textarea maxlength="300" name="descripcion" placeholder="Descripcion"
+                                    class="form-control"></textarea>
                             </div>
 
 
-                           
+
 
                             <div class="form-group">
-                                <input type="number" name="cedulaPropietario" placeholder="Cedula Propietario" class="form-control">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" name="nombrePropietario" placeholder="Nombre Propietario" class="form-control">
+                                <input type="number" name="cedulaPropietario" placeholder="Cedula Propietario"
+                                    class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <input type="number" name="telefonoPropietario" placeholder="Telefono Propietario" class="form-control">
+                                <input type="text" name="nombrePropietario" placeholder="Nombre Propietario"
+                                    class="form-control">
                             </div>
 
                             <div class="form-group">
-                                <input type="email" name="correoPropietario" placeholder="Correo Propietario" class="form-control">
+                                <input type="number" name="telefonoPropietario" placeholder="Telefono Propietario"
+                                    class="form-control">
                             </div>
 
-                            
+                            <div class="form-group">
+                                <input type="email" name="correoPropietario" placeholder="Correo Propietario"
+                                    class="form-control">
+                            </div>
 
 
 
-                          
+
+
+
                             <div class="form-group">
                                 <button class="btn btn-success btn-block">
                                     Registrar
@@ -209,9 +235,10 @@
         </div>
 
     </div>
-   
-   
+
+
 
     <%- include("../widgets/body")%>
 </body>
+
 </html>
