@@ -10,6 +10,7 @@ pageFormularioPropiedades
 
 import {
 pagePropiedadesDisponibles,
+pageBusquedaPropiedades,
 agregarPropiedades
 } from '../controller/propiedadesController.js';
 
@@ -35,5 +36,7 @@ router.get('/formularioPropiedades', pageFormularioPropiedades)
 router.post('/agregar/propiedades',agregarPropiedades)
 
 router.post('/registro/usuario',registroUsuario)
+
+router.post('/busqueda/propiedades',pageBusquedaPropiedades)
 
 export default router;

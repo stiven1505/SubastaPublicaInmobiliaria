@@ -17,10 +17,7 @@
 
   <%- include("../widgets/body")%>
 
-    <div class="barra_publicidad">
-      
-    </div>
-    
+
     <div class="barra-superior">
       <%- include("../widgets/BarraFiltros/index.ejs")%>
     </div>
@@ -28,8 +25,8 @@
 
     <div class="row tarjeta">
 
-      <% propiedad.forEach(function(datosPropiedad, index) { %>
-        <div class="col-md-5 col-lg-3">
+      <% propiedadBusqueda.forEach(function(datosPropiedad, index) { %>
+        <div class="col-md-5 col-lg-4">
           <div class="card" style="margin-top:2rem;">
             <div id="carouselExample<%= index %>" class="carousel slide">
 
@@ -210,18 +207,18 @@
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal<%= index %>" tabindex="-1" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true" style="top:4rem">
+                  aria-hidden="true" style="top:7rem">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrate para mas informacion</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Dejanos tus datos</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
 
                         <img
                           src="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681482962/Pagina%20SPI/logoPrincipal_cwwd6x.png"
-                          class="img-fluid" alt="..." style="margin-bottom: 0rem;">
+                          class="img-fluid" alt="..." style="margin-bottom: 0.2rem;">
 
 
 
@@ -248,22 +245,24 @@
                         </div>
 
                         <form action="/registro/usuario" method="post" enctype="multipart/form-data">
-                         
-                          <div class="form- camposModal">
+                          <br>
+                          <p>Regístrese ahora para acceder a información detallada sobre la propiedad que le interesa y
+                            no pierda la oportunidad de hacer su sueño realidad.</p>
+                          <div class="form-group">
                             <input type="text" name="nombreInteresado" placeholder="Nombre completo"
                               class="form-control">
                           </div>
-                          <div class="form- camposModal">
+                          <div class="form-group">
                             <input type="email" name="correoInteresado" placeholder="Correo electronico"
                               class="form-control">
                           </div>
-                          <div class="form- camposModal">
+                          <div class="form-group">
                             <input type="number" name="celularInteresado" placeholder="Numero de celular"
                               class="form-control">
                           </div>
                           <div class="form-group">
                             <p> <br>
-                             
+                              <b> Me interesa esta publicacion </b> <br>
                               <%= datosPropiedad.titulo %> ubicado en la ciudad de <%= datosPropiedad.ciudad %>, con una
                                   area cuadrada de <%= datosPropiedad.area %>.
                             </p>
@@ -274,9 +273,9 @@
                               class="form-control" readonly>
                           </div>
                       </div>
-                      <div class="modal-footer botonEnviar">
-                        
-                        <button class="btn btn-success btn-block">Enviar</button>
+                      <div class="modal-footer">
+                        <button class="btn btn-success btn-block" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-success btn-block">Save changes</button>
                       </div>
                       </form>
 

@@ -1,7 +1,6 @@
 .tarjeta{
-    margin-top: 5rem;
-    margin-left: 11rem;
-    margin-right: 1rem;
+    margin-top: 8rem;
+    margin-left: 13rem;
     position: relative;
     font-size: 13px;
 }
@@ -36,16 +35,39 @@ button.prueba {
 /*BARRA DE FILTROS */
 
 
-.barra-lateral {
+.barra_publicidad {
   position: fixed;
   top: 5rem;
   left: 0;
-  width: 170px;
+  width: 200px;
   height: 100%;
   padding: 20px;
   background-color: #f5fbf9;
-  border-right: 1px solid #ddd;
 }
+
+.barra-superior {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 7rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 4rem;
+  padding: 20px;
+  background-color: #f5fbf9;
+  border-radius: 20px;
+  align-items: center;
+}
+.form-group{
+  display: inline-block;
+  justify-content: flex-end;
+
+ 
+}
+
 
 .precio{
   text-align: right;
@@ -75,10 +97,28 @@ tr{
 table{
   line-height: 0.1rem;
 }
+
+
+
+.camposModal{
+  display: block;
+  margin-top: 5px;
+}
+
+.botonEnviar{
+  justify-content: flex-start;
+}
+
+
 /*ICONOS*/
 span{
   font-size: 17px !important;
 }
+
+
+
+
+
 
 @media screen and (max-width:1064px) {
   .btnInteresado{
@@ -86,3 +126,22 @@ span{
   }
 
 }
+@media screen and (max-width:987px) {
+.barra_publicidad{
+  display: none;
+}
+.tarjeta{
+  margin-left: 6rem;
+}
+}
+
+@media screen and (max-width:750px) {
+  .barra_publicidad{
+    display: none;
+  }
+  .tarjeta{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  }
+

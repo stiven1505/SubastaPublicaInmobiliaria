@@ -18,6 +18,32 @@ export const pagePropiedadesDisponibles =  async (req,res)=>{
 };
 
 
+export const pageBusquedaPropiedades=  async (req,res)=>{
+    //consulta en mongoDB para mostrar resultados
+
+    const datos = req.body;
+    let query = {};
+
+    if (datos.titulo && datos.titulo.trim() !== '' && Propiedades.schema.paths.hasOwnProperty('titulo')
+    && datos.ciudad && datos.ciudad.trim() !== '' && Propiedades.schema.paths.hasOwnProperty('ciudad')) {
+    query = {
+       
+        $and: [
+            { titulo: { $regex: datos.titulo, $options: 'i' } },
+            { ciudad: { $regex: datos.ciudad, $options: 'i' } }
+        ],
+       
+    };
+} else {
+    query = {};
+}
+ 
+    
+
+    const propiedadBusqueda = await Propiedades.find(query)
+
+    res.render('busquedaPropiedadesDisponibles',{propiedadBusqueda,title:'SPI - Busqueda Propiedades Disponibles'})
+};
 
 
 export const  agregarPropiedades = async(req,res)=>{

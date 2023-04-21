@@ -22,9 +22,7 @@
     width: 80px;
 }
 
-.form-group {
-    margin-top: 0.4rem;
-}
+
 
 input.form-control:focus {
     outline-color: red;
