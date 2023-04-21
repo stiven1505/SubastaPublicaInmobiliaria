@@ -8,7 +8,7 @@
 
   }
 .contenedorDerechoUno{
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
 .iconWpp{
     margin-top: 13px;
@@ -30,7 +30,7 @@
 #contenedorContacto{
 
   position: absolute;
-  top: 42%;
+  top: 25%;
   left: 20rem;
   z-index: 1;
   color: #000000;
@@ -51,7 +51,7 @@
 
 @media screen and (max-width:1450px) {
   #contenedorContacto{
-    width:50rem ;
+    width:80% ;
     top: 35%;
   }
 }
@@ -74,24 +74,30 @@
 @media screen and (max-width:770px) {
   #contenedorContacto{
     top: 10rem;
+    
    }
   .contenedorDerechoUno{
     margin-top: 30rem;
-    margin-left: -30rem;
+    margin-left: -80%;
     width: 15rem;
   }
+  .contGeneralContacto{
+    margin-left: 12%;
+  }
+
 }
 @media screen and (max-width:576px) {
   #contenedorContacto{
-    top: 15rem;
-    left: 0%;
-    width: 34rem;
+    top:12%;
+    margin-left: 5%;
    }
   .contenedorDerechoUno{
     margin-top: 30rem;
-
     width: 10rem;
 
+  }
+  .imgContacto{
+    margin-left: -10% !important;
   }
   #textoConta{
     font-size: 1rem;
