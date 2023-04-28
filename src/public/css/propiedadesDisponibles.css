@@ -12,18 +12,26 @@
 
 button.prueba:focus, 
 button.prueba:active {
-  background-color: #f5fbf9!important; /* Cambiar el color de fondo */
+  background-color: #defcf2!important; /* Cambiar el color de fondo */
   color: #040404 !important; /* Cambiar el color del texto */
 }
 
 button.prueba {
-    background-color: #f5fbf9 !important; /* Cambiar el color de fondo */
-    color: #171616 !important; /* Cambiar el color del texto */
+    background-color: #043343 !important; /* Cambiar el color de fondo 6adeb7*/
+    color: white !important; /* Cambiar el color del texto */
     height: 2.7rem;
     font-size: 13px;
-    border-radius: 23px;
+    border-radius: 50px;
   
   }
+  button{
+    background-color: #043343 !important;
+  }
+  .carousel-control-next, .carousel-control-prev {
+    width: 10%;
+    opacity: .2;
+  }
+
 
   #datosUbicacion{
     display: inline-block;
@@ -43,7 +51,7 @@ button.prueba {
   width: 200px;
   height: 100%;
   padding: 20px;
-  background-color: #f5fbf9;
+;
 }
 
 .barra-superior {
@@ -52,13 +60,13 @@ button.prueba {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 7rem;
-  left: 50%;
+  top: 9rem;
+  left: 55%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 90%;
   height: 4rem;
   padding: 20px;
-  background-color: #f5fbf9;
+ 
   border-radius: 20px;
   align-items: center;
 }
@@ -96,7 +104,7 @@ tr{
   border-color: transparent !important;
 }
 table{
-  line-height: 0.1rem;
+
 }
 
 

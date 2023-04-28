@@ -2,10 +2,10 @@
 
 /*-------------diseño index-inicio-------------*/
 #imagenIndexPrincipal {
-    filter: blur(2px) grayscale(5%);
+  /*  filter: blur(2px) grayscale(5%);*/
     width: 100%;
-    height: auto;
-    margin-top: 3rem;
+    height: 45rem;
+    margin-top: 5rem;
 }
 
 #divSlogan {
@@ -14,7 +14,7 @@
     left: 6%;
     z-index: 1;
     color: #f5fbf9;
-    text-shadow: 1px 1px black;
+    /*text-shadow: 1px 1px black;*/
 }
 
 

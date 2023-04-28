@@ -18,9 +18,9 @@
   <%- include("../widgets/body")%>
 
     <div class="barra_publicidad">
-      
+
     </div>
-    
+
     <div class="barra-superior">
       <%- include("../widgets/BarraFiltros/index.ejs")%>
     </div>
@@ -103,7 +103,8 @@
                       <h2 class="accordion-header">
                         <button class="accordion-button collapsed prueba" type="button" data-bs-toggle="collapse"
                           data-bs-target="#flush-collapse<%= index %>" aria-expanded="false"
-                          aria-controls="flush-collapse<%= index %>">
+                          aria-controls="flush-collapse<%= index %>" style="border-top-left-radius: 10px !important; border-top-right-radius: 10px !important;
+                        ">
                           Zonas Comunes
                         </button>
                       </h2>
@@ -169,7 +170,7 @@
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed prueba" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapse<%= index %>" aria-expanded="false"
-                        aria-controls="flush-collapse<%= index %>">
+                        aria-controls="flush-collapse<%= index %>" style="border-bottom-left-radius: 10px !important; border-bottom-right-radius: 10px !important;"  >
                         Descripcion
                       </button>
 
@@ -248,7 +249,7 @@
                         </div>
 
                         <form action="/registro/usuario" method="post" enctype="multipart/form-data">
-                         
+
                           <div class="form- camposModal">
                             <input type="text" name="nombreInteresado" placeholder="Nombre completo"
                               class="form-control">
@@ -263,7 +264,7 @@
                           </div>
                           <div class="form-group">
                             <p> <br>
-                             
+
                               <%= datosPropiedad.titulo %> ubicado en la ciudad de <%= datosPropiedad.ciudad %>, con una
                                   area cuadrada de <%= datosPropiedad.area %>.
                             </p>
@@ -275,7 +276,7 @@
                           </div>
                       </div>
                       <div class="modal-footer botonEnviar">
-                        
+
                         <button class="btn btn-success btn-block">Enviar</button>
                       </div>
                       </form>
@@ -291,7 +292,8 @@
 
               </div>
               <div class="col text-right">
-                <p class="precio"> $ <%= datosPropiedad.precio %>
+                <p class="precio">
+                  <%= datosPropiedad.precio %>
                 </p>
               </div>
 
@@ -307,7 +309,7 @@
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
       </div>
-      
+
 </body>
 
 </html>

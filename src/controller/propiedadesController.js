@@ -53,6 +53,14 @@ export const  agregarPropiedades = async(req,res)=>{
         const zonasComunesSeleccionadas = req.body.zonasComunes;
 
         const datos = req.body;
+
+        const precioFormateado = Number(datos.precio).toLocaleString('es-CO', {
+            style: 'currency',
+            currency: 'COP',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 2
+          });
+
         // se hace un bucle donde va a guardar cada una de la imagenes en cloudinary y se ira guardando en el arreglo imagenes con sus respetivos datos y luego se enviaran a la base de datos 
         for (const file of req.files) {
         const imagen = await cloudinary.v2.uploader.upload(file.path, { width:1600, height:750 });//subida a cloudinary
@@ -69,7 +77,7 @@ export const  agregarPropiedades = async(req,res)=>{
             ciudad :  datos.ciudad ,
             direccion :  datos.direccion ,
             barrio :  datos.barrio ,
-            precio :  datos.precio ,
+            precio :  precioFormateado ,
             area :  datos.area ,
             habitaciones :  datos.habitaciones ,
             banos :  datos.banos ,
