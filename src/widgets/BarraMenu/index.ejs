@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <%- include("../cabecera.ejs") %>
+
 
 </head>
 
@@ -18,12 +18,13 @@
         <img
           src="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681482962/Pagina%20SPI/logoPrincipalMovil_sakfhs.png"
           id="logoMenu2" alt="...">
-        
+
 
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgba(0, 0, 0, 0.125) !important;">
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+        style="background-color: rgba(0, 0, 0, 0.125) !important;">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -36,13 +37,24 @@
             <a class="nav-link" href="/acercaNosotros">Acerca de nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/propiedadesDisponibles">Propiedades disponibles</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="/preguntasFrecuentes">Preguntas frecuentes</a>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Propiedades Disponibles
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/propiedadesDisponibles">Propiedades en Venta</a></li>
+              <li><a class="dropdown-item" href="#">Propiedades en Subasta</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/convertidor">Convertidor divisas</a></li>
+              <li><a class="dropdown-item" href="/simuladorCredito">Simulador Credito</a></li>
+            </ul>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contactanos">Contactanos</a>
+            <a class="nav-link" href="/contactanos">Contacto</a>
           </li>
         </ul>
       </div>

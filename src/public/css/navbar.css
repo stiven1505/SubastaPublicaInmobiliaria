@@ -9,9 +9,13 @@
 #logoMenu2 {
     display: none;
 }
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: white;
+}
+
 
 .navbar {
-    background-color: #f5fbf9 !important;
+    background-color: #043343 !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -26,6 +30,10 @@
     font-family: Texto;
     margin-left: 1rem;
 }
+.nav-link:hover {
+    color: white;
+  }
+  
 
 .cuadrado {
     width: 26rem;

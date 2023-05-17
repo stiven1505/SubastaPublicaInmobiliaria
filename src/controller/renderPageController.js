@@ -7,3 +7,5 @@ export const pageAcercaNosotros = (req,res)=>res.render('acercaNosotros',{title:
 export const pageContacto =  (req,res)=>res.render('contactanos',{title:'SPI - Contactenos'});
 
 export const  pageFormularioPropiedades = (req,res)=>res.render('formularioPropiedades',{title:'SPI - Administracion'})
+
+export const pageConvertidor = (req,res)=>res.render('convertidor',{title:'SPI - Convertidor'})

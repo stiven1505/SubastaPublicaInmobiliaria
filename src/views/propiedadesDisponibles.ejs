@@ -8,9 +8,7 @@
   <title><%-title%></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-  <link rel="shortcut icon" type="image/png"
-    href="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681484840/Pagina%20SPI/logoPequeno_udcoyg.jpg">
-
+  <%- include("../widgets/cabecera.ejs") %>
 </head>
 
 <body class="propiedadesDisponibles">
@@ -18,7 +16,6 @@
   <%- include("../widgets/body")%>
 
     <div class="barra_publicidad">
-
     </div>
 
     <div class="barra-superior">
@@ -36,7 +33,7 @@
               <div class="carousel-inner">
                 <% datosPropiedad.image.forEach(function(imagen, index) { %>
                   <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
-                    <img src="<%= imagen.url %>" class="d-block w-100" alt="...">
+                    <img src="<%= imagen.url %>" class="d-block w-100" alt="..." style="height: 17rem;">
                   </div>
                   <% }); %>
 
@@ -55,7 +52,7 @@
           </div>
 
           <div class="card-body cardPropiedades">
-            <table class="table">
+            <table class="table" style="line-height:1">
               <tr style="text-align: center; margin-top: 2rem;">
                 <th colspan="6">
                   <%= datosPropiedad.titulo %>
@@ -121,34 +118,34 @@
                                       <% switch(zonaComun) { case "ascensor" : %><span
                                           class="material-symbols-outlined">
                                           elevator
-                                        </span> ascensor<% break; case "azotea" : %><span
+                                        </span> Ascensor<% break; case "azotea" : %><span
                                             class="material-symbols-outlined">
                                             deck
-                                          </span> azotea <% break; case "gimnasio" : %> <span
+                                          </span> Azotea <% break; case "gimnasio" : %> <span
                                               class="material-symbols-outlined">
                                               fitness_center
-                                            </span> gimnasio<% break; case "sala reuniones" : %><span
+                                            </span> Gimnasio<% break; case "sala reuniones" : %><span
                                                 class="material-symbols-outlined">
                                                 groups_2
-                                              </span> sala reuniones <% break; case "lavanderia" : %> <span
+                                              </span> Sala reuniones <% break; case "lavanderia" : %> <span
                                                   class="material-symbols-outlined">
                                                   local_laundry_service
-                                                </span> lavanderia <% break; case "piscina" : %><span
+                                                </span> Lavanderia <% break; case "piscina" : %><span
                                                     class="material-symbols-outlined">
                                                     pool
-                                                  </span> piscina <% break; case "salon de eventos" : %><span
+                                                  </span> Piscina <% break; case "salon de eventos" : %><span
                                                       class="material-symbols-outlined">
                                                       stadium
-                                                    </span> salon de eventos <% break; case "zona juegos" : %><span
+                                                    </span> Salon de eventos <% break; case "zona juegos" : %><span
                                                         class="material-symbols-outlined">
                                                         stadia_controller
-                                                      </span> zona juegos <% break; case "bodega" : %><span
+                                                      </span> Zona juegos <% break; case "bodega" : %><span
                                                           class="material-symbols-outlined">
                                                           garage_home
-                                                        </span> bodega <% break; case "zona de BBQ " : %><span
+                                                        </span> Bodega <% break; case "zona de BBQ " : %><span
                                                             class="material-symbols-outlined">
                                                             outdoor_grill
-                                                          </span> zona de BBQ <% break; default: zonaComun } %>
+                                                          </span> Zona de BBQ <% break; default: zonaComun } %>
                                     </p>
                                   </div>
                                   <% if (counter % 2===1) { %>
@@ -170,8 +167,9 @@
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed prueba" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapse<%= index %>" aria-expanded="false"
-                        aria-controls="flush-collapse<%= index %>" style="border-bottom-left-radius: 10px !important; border-bottom-right-radius: 10px !important;"  >
-                        Descripcion
+                        aria-controls="flush-collapse<%= index %>"
+                        style=" border-bottom-left-radius: 10px !important; border-bottom-right-radius: 10px !important;">
+                        Descripción
                       </button>
 
                     </h2>
@@ -179,7 +177,7 @@
                       data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body">
                         <div>
-                          <p class="text-break">
+                          <p class="text-break" align="justify">
                             <%= datosPropiedad.descripcion %>
                           </p>
                         </div>
@@ -204,9 +202,11 @@
                   class="btn btn-success btnInteresado" style="background-color: #043343;">Me interesa</a>-->
 
                 <!-- Button trigger modal -->
-                <button style="font-size: 10px;" type="button" class="btn btn-success" data-bs-toggle="modal"
+                <button
+                  style="Margin-top:-1rem;font-size: 14px;background-color: #ed9b0b!important;color: black;--bs-btn-border-color: none"
+                  type="button" class="btn btn-success" data-bs-toggle="modal"
                   data-bs-target="#exampleModal<%= index %>">
-                  Info
+                  Contacto
                 </button>
 
                 <!-- Modal -->
@@ -293,7 +293,7 @@
               </div>
               <div class="col text-right">
                 <p class="precio">
-                  <%= datosPropiedad.precio %>
+                  $ <%= datosPropiedad.precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); %>
                 </p>
               </div>
 
@@ -305,9 +305,7 @@
       </div>
       </div>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-        crossorigin="anonymous"></script>
+   
       </div>
 
 </body>

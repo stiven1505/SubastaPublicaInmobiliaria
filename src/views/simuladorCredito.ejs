@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+
+  </title>
+  <%- include("../widgets/cabecera.ejs") %>
+</head>
+
+<body>
+
+
+<div class="container" id="contenedorGeneralIzquierda">
+  <h1 id="titulo">Simulador de Credito</h1><br><br>
+<div class="row" id>   
+<div class="col-md-7">
+  <form action="/simuladorCredito" method="POST" class=" mx-auto convertidor" >
+    
+    <div class="form-group">
+      <label for="monto">Monto del Préstamo</label>
+      <input type="number" class="form-control" name="monto" id="monto">
+    </div>
+
+    <div class="form-group">
+        <label for="plazo">Plazo anual</label>
+        <input type="number" class="form-control" name="plazo" id="plazo">
+      </div>
+
+    <div class="form-group">
+        <label for="interes">Tasa de interés nominal anual</label>
+        <input type="number" class="form-control" name="interes" id="interes">
+      </div>
+
+    <button type="submit" class="btn btn-primary">Simular</button>
+   <!-- Resultado de la conversión de moneda -->
+<% if (typeof pagoMensual !=='undefined' ) { %>
+<p class="simulacion">
+  ----------------------------------------------------------------------------------------- <br>
+  El credito es para un monto de  <strong>$<%= monto %>.</strong> <br>
+    Con un interes de <strong><%= interes %>%.</strong> <br>
+    A un plazo de <strong><%= plazoAnual %> años</strong> , es decir <strong><%= plazoMensual %> Meses.</strong> <br>
+    ----------------------------------------------------------------------------------------- <br>
+    
+    Tasa efectiva anual <strong>'TEA'</strong>  es de <strong><%= TEA.toFixed(2)%>%.</strong> <br>
+    Tasa efectiva Mensual <strong>'TEM'</strong>  es de <strong><%= TEM.toFixed(2) %>%</strong> <br>
+    <strong>Cuota Mensual: <%= pagoMensual.toFixed(2) %>.</strong> <br>
+    <strong>Pago total : <%= pagoTotal.toFixed(2) %></strong> <br>
+    ----------------------------------------------------------------------------------------- <br>
+</p>
+<% } else { %>
+<p>Esperando para simular...</p>
+<% } %>
+</form>
+</div>
+<div class="col-md-5" id="textAcercaNosotros">
+  <p align="justify">La compra de un inmueble es una de las decisiones más importantes que una persona puede tomar en su vida. Por lo general, esto implica la obtención de un crédito hipotecario para poder cubrir el costo total de la propiedad. Sin embargo, antes de comprometerse con cualquier préstamo, es importante conocer el costo real y las opciones de financiamiento disponibles</p>
+</div>
+</div>
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <%- include("../widgets/body") %>
+      <%- include("../widgets/Footer/index")%>
+</body>
+
+</html>

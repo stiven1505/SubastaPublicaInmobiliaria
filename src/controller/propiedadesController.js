@@ -30,7 +30,10 @@ export const pageBusquedaPropiedades=  async (req,res)=>{
        
         $and: [
             { titulo: { $regex: datos.titulo, $options: 'i' } },
-            { ciudad: { $regex: datos.ciudad, $options: 'i' } }
+            { ciudad: { $regex: datos.ciudad, $options: 'i' } },
+            { precio: { $gte: datos.precioMin, $lte: datos.precioMax } },
+            { area: { $gte: datos.areaMin, $lte: datos.areaMax } }
+
         ],
        
     };
@@ -44,6 +47,10 @@ export const pageBusquedaPropiedades=  async (req,res)=>{
 
     res.render('busquedaPropiedadesDisponibles',{propiedadBusqueda,title:'SPI - Busqueda Propiedades Disponibles'})
 };
+
+
+
+
 
 
 export const  agregarPropiedades = async(req,res)=>{
@@ -63,7 +70,7 @@ export const  agregarPropiedades = async(req,res)=>{
 
         // se hace un bucle donde va a guardar cada una de la imagenes en cloudinary y se ira guardando en el arreglo imagenes con sus respetivos datos y luego se enviaran a la base de datos 
         for (const file of req.files) {
-        const imagen = await cloudinary.v2.uploader.upload(file.path, { width:1600, height:750 });//subida a cloudinary
+        const imagen = await cloudinary.v2.uploader.upload(file.path, { width:1600, height:900 });//subida a cloudinary
         imagenes.push({//guarda en arreglo 
             url: imagen.secure_url,
             public_id: imagen.public_id,
@@ -77,7 +84,7 @@ export const  agregarPropiedades = async(req,res)=>{
             ciudad :  datos.ciudad ,
             direccion :  datos.direccion ,
             barrio :  datos.barrio ,
-            precio :  precioFormateado ,
+            precio :  datos.precio ,
             area :  datos.area ,
             habitaciones :  datos.habitaciones ,
             banos :  datos.banos ,

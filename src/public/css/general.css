@@ -14,14 +14,12 @@
 
 
 /*------------------------------------------------*/
-body{
-    
-}
+
 #contenedorGeneralIzquierda {
     margin-top: 10rem;
- 
-  
+    margin-bottom: 14rem;
 }
+
 #titulo {
     font-family: Titulo;
     font-size: 4rem;
@@ -32,6 +30,7 @@ body{
     font-size: 2rem;
    
 }
+
 #contenedorGeneralCentrado{
     margin-top: 12rem;
     

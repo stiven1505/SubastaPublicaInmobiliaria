@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+
+  </title>
+  <%- include("../widgets/cabecera.ejs") %>
+</head>
+
+<body>
+
+
+<div class="container" id="contenedorGeneralIzquierda">
+  <h1 id="titulo">Conversor de Divisas</h1><br><br>
+<div class="row" id>   
+<div class="col-md-6">
+  <form action="/convertir" method="POST" class=" mx-auto convertidor" >
+    <div class="form-group">
+      <label for="moneda-de">Moneda de origen:</label>
+      <select class="form-control" name="moneda-de" id="moneda-de">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="COP">COP</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="moneda-a">Moneda de destino:</label>
+      <select class="form-control" name="moneda-a" id="moneda-a">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="COP">COP</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="cantidad-de">Cantidad:</label>
+      <input type="number" class="form-control" name="cantidad-de" id="cantidad-de">
+    </div>
+    <button type="submit" class="btn btn-primary">Convertir</button>
+   <!-- Resultado de la conversión de moneda -->
+<% if (typeof cantidadConvertida !=='undefined' ) { %>
+<p>La cantidad convertida es: <%= cantidadConvertida %>
+</p>
+<% } else { %>
+<p>Esperando para convertir...</p>
+<% } %>
+</form>
+</div>
+<div class="col-md-6" id="textAcercaNosotros">
+  <p align="justify"> la conversión de moneda y la venta de inmuebles están estrechamente relacionadas en el mundo de los negocios internacionales. Es esencial tener en cuenta cómo las fluctuaciones en las tasas de cambio pueden afectar el valor de las propiedades y, por lo tanto, los resultados financieros de una transacción. Para los vendedores, esto significa evaluar cuidadosamente los precios y asegurarse de tener una estrategia adecuada de conversión de moneda para minimizar el riesgo financiero. Para los compradores, es importante estar atentos a las tasas de cambio y evaluar cuidadosamente cómo pueden afectar
+    el valor de la transacción.</p>
+</div>
+</div>
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <%- include("../widgets/body") %>
+      <%- include("../widgets/Footer/index")%>
+</body>
+
+</html>

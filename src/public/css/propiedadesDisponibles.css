@@ -1,44 +1,52 @@
-.tarjeta{
-    margin-top: 8rem;
-    margin-left: 13rem;
-    margin-right: 1rem;
-    position: relative;
-    font-size: 13px;
+.tarjeta {
+  margin-top: 8rem;
+  margin-left: 13rem;
+  margin-right: 1rem;
+  position: relative;
+  font-size: 13px;
 }
 
-.textoPropiedad{
-    width: 10rem;
+.textoPropiedad {
+  width: 10rem;
 }
 
-button.prueba:focus, 
+button.prueba:focus,
 button.prueba:active {
-  background-color: #defcf2!important; /* Cambiar el color de fondo */
-  color: #040404 !important; /* Cambiar el color del texto */
+  background-color: #defcf2 !important;
+  /* Cambiar el color de fondo */
+  color: #040404 !important;
+  /* Cambiar el color del texto */
 }
 
 button.prueba {
-    background-color: #043343 !important; /* Cambiar el color de fondo 6adeb7*/
-    color: white !important; /* Cambiar el color del texto */
-    height: 2.7rem;
-    font-size: 13px;
-    border-radius: 50px;
-  
-  }
-  button{
-    background-color: #043343 !important;
-  }
-  .carousel-control-next, .carousel-control-prev {
-    width: 10%;
-    opacity: .2;
-  }
+  background-color: #043343 !important;
+  /* Cambiar el color de fondo 6adeb7*/
+  color: white !important;
+  /* Cambiar el color del texto */
+  height: 2.7rem;
+  font-size: 13px;
+  border-radius: 50px;
+
+}
+
+button {
+  background-color: #043343 !important;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: 10%;
+  opacity: .2;
+}
 
 
-  #datosUbicacion{
-    display: inline-block;
-  }
-  #datosUbicacion-area{
-    float: right;
-  }
+#datosUbicacion {
+  display: inline-block;
+}
+
+#datosUbicacion-area {
+  float: right;
+  font-weight: bold;
+}
 
 
 /*BARRA DE FILTROS */
@@ -51,7 +59,7 @@ button.prueba {
   width: 200px;
   height: 100%;
   padding: 20px;
-;
+  ;
 }
 
 .barra-superior {
@@ -61,96 +69,167 @@ button.prueba {
   align-items: center;
   position: relative;
   top: 9rem;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  width: 90%;
+  transform: translate(0%, -50%);
+  width: 100%;
   height: 4rem;
   padding: 20px;
- 
-  border-radius: 20px;
   align-items: center;
 }
-.form-group{
+
+.form-group {
   display: inline-block;
   justify-content: flex-end;
 
- 
+
 }
 
 
-.precio{
+.precio {
   text-align: right;
+  font-weight: bold;
 }
-.propiedadesDisponibles{
-  text-transform: capitalize;
-  background-image: url(../image/fondoP.jp);
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-attachment: fixed;
+
+.propiedadesDisponibles {
   
 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+
 }
-.cardPropiedades{
+
+.cardPropiedades {
   background-color: white;
-  
+
   border-radius: 10px;
 }
-.btnInteresado{
+
+.btnInteresado {
   margin-bottom: 1rem;
 }
-tr{
+
+tr {
   border: none !important;
   border-style: none !important;
   border-color: transparent !important;
 }
-table{
 
-}
-
-
-
-.camposModal{
+.camposModal {
   display: block;
   margin-top: 5px;
 }
 
-.botonEnviar{
+.botonEnviar {
   justify-content: flex-start;
 }
 
 
 /*ICONOS*/
-span{
+span {
   font-size: 17px !important;
 }
 
+.ciudadFiltro{
+  width: 6.5rem;
+}
+
+.tipoFiltro{
+  width: 11rem;
+}
+
+.precios{
+  margin-top: -1.1rem;
+  margin-left: 1rem;
+  line-height: 0.2;
+  font-weight: bold;
+}
 
 
+.area{
+  margin-top: -1.1rem;
+  margin-left: 1rem;
+  line-height: 0.2;
+  font-weight: bold;
+}
+.ubicacion{
+  margin-top: -1.1rem;
+    margin-left: 1rem;
+    line-height: 0.2;
+    font-weight: bold;
+}
+.filtroPrecio{
+ /* margin-right: -11.5rem;*/
+}
 
+.precioFiltro{
+  width: 8rem;
+}
 
+.areaFiltro{
+  width: 5rem;
+}
 
 @media screen and (max-width:1064px) {
-  .btnInteresado{
+  .btnInteresado {
     font-size: 13px;
   }
 
 }
+
 @media screen and (max-width:987px) {
-.barra_publicidad{
-  display: none;
-}
-.tarjeta{
-  margin-left: 6rem;
-}
+  .barra_publicidad {
+    display: none;
+  }
+
+  .tarjeta {
+    margin-left: 6rem;
+  }
 }
 
 @media screen and (max-width:750px) {
-  .barra_publicidad{
+  .barra_publicidad {
     display: none;
   }
-  .tarjeta{
+
+  .tarjeta {
     margin-left: 1rem;
     margin-right: 1rem;
   }
-  }
+}
 
+
+
+@media screen and (max-width:900px) {
+  .tipoFiltro{
+    width: 18rem;
+  }
+  .filtro{
+    display: block;
+    margin-top: 0.5rem;
+  }
+  .ciudadFiltro{
+    width: 18rem;
+  }
+  .botonesFiltro{
+    margin-left: 32%;
+    margin-top: 1rem;
+  }
+  .barra-superior{
+    top:15rem;
+    margin-bottom: 18rem;
+  }
+  .filtroArea{
+    margin-top: -6.4rem;
+    margin-left: 10.5rem;
+  }
+  .precioFiltro{
+    width: 10rem;
+  }
+  .areaFiltro{
+    width:7.6rem;
+  }
+  .ciudadFiltro{
+    margin-bottom: 1rem;
+  }
+  }

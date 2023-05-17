@@ -8,9 +8,7 @@
     <title>
         <%= title %>
     </title>
-    <link rel="shortcut icon" type="image/png"
-        href="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681484840/Pagina%20SPI/logoPequeno_udcoyg.jpg">
-
+   <%- include("../widgets/cabecera.ejs") %>
 </head>
 
 <body>
@@ -52,7 +50,7 @@
                                     <option value="Edif. oficinas en venta">Edif. oficinas en venta</option>
                                     <option value="Consultorios en venta">Consultorios en venta</option>
                                     <option value="Edif. Apartamentos en venta">Edif. Apartamentos en venta</option>
-
+                                    <option value="Condominio en venta">Condominio en venta</option>
 
                                 </select>
                             </div>
@@ -71,6 +69,7 @@
                                     <option value="Cali">Cali</option>
                                     <option value="Cartagena">Cartagena</option>
                                     <option value="Cúcuta">Cúcuta</option>
+                                    <option value="Dagua">Dagua</option>
                                     <option value="Florencia">Florencia</option>
                                     <option value="Ibagué">Ibagué</option>
                                     <option value="Leticia">Leticia</option>
@@ -113,7 +112,7 @@
                             </div>
 
                             <div class=" camposFormulario">
-                                <input type="number" name="area" placeholder="Area m²" class="form-control">
+                                <input step="0.01" min="0" type="number" name="area" placeholder="Area m²" class="form-control">
                             </div>
 
                             <div class=" camposFormulario">
@@ -191,7 +190,7 @@
                             </div>
 
                             <div class=" camposFormulario">
-                                <textarea maxlength="300" name="descripcion" placeholder="Descripcion"
+                                <textarea maxlength="450" name="descripcion" placeholder="Descripcion"
                                     class="form-control"></textarea>
                             </div>
 
