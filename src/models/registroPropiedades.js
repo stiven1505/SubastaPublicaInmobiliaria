@@ -5,6 +5,7 @@ const propiedades = new Schema({
   /*Datos para vista publica*/
    
     titulo:{type:String},
+    departamento: {type: String},
     ciudad: {type: String},
     direccion: {type: String},
     barrio: {type: String},

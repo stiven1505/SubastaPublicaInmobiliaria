@@ -25,11 +25,14 @@ export const pageBusquedaPropiedades=  async (req,res)=>{
     let query = {};
 
     if (datos.titulo && datos.titulo.trim() !== '' && Propiedades.schema.paths.hasOwnProperty('titulo')
-    && datos.ciudad && datos.ciudad.trim() !== '' && Propiedades.schema.paths.hasOwnProperty('ciudad')) {
-    query = {
+    && datos.ciudad && datos.ciudad.trim() !== '' && Propiedades.schema.paths.hasOwnProperty('ciudad')
+    && datos.departamento && datos.departamento.trim() !== '' && Propiedades.schema.paths.hasOwnProperty('departamento')) {
+    
+        query = {
        
         $and: [
             { titulo: { $regex: datos.titulo, $options: 'i' } },
+            { departamento: { $regex: datos.departamento, $options: 'i' } },
             { ciudad: { $regex: datos.ciudad, $options: 'i' } },
             { precio: { $gte: datos.precioMin, $lte: datos.precioMax } },
             { area: { $gte: datos.areaMin, $lte: datos.areaMax } }
@@ -81,6 +84,7 @@ export const  agregarPropiedades = async(req,res)=>{
             const newPropiedad =  new Propiedades({
             /*Datos para vista publica*/
             titulo : datos.titulo ,
+            departamento : datos.departamento , 
             ciudad :  datos.ciudad ,
             direccion :  datos.direccion ,
             barrio :  datos.barrio ,
@@ -113,3 +117,4 @@ export const  agregarPropiedades = async(req,res)=>{
                     res.status(500).send('Error uploading or deleting local file');
                 }
             }
+

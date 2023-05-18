@@ -8,4 +8,3 @@ export const pageContacto =  (req,res)=>res.render('contactanos',{title:'SPI - C
 
 export const  pageFormularioPropiedades = (req,res)=>res.render('formularioPropiedades',{title:'SPI - Administracion'})
 
-export const pageConvertidor = (req,res)=>res.render('convertidor',{title:'SPI - Convertidor'})
