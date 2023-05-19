@@ -28,16 +28,25 @@
       <% propiedad.forEach(function(datosPropiedad, index) { %>
         <div class="col-md-5 col-lg-4">
           <div class="card" style="margin-top:2rem;">
+
+
             <div id="carouselExample<%= index %>" class="carousel slide">
 
               <div class="carousel-inner">
                 <% datosPropiedad.image.forEach(function(imagen, index) { %>
                   <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
-                    <img src="<%= imagen.url %>" class="d-block w-100" alt="..." style="height: 17rem;">
+                    <a data-fancybox="carousel" href="<%= imagen.url %>" data-caption="Image Title">
+                      <img src="<%= imagen.url %>" class="d-block w-100" alt="..." style="height: 17rem;">
+                    </a>
                   </div>
-                  <% }); %>
+                <% }); %>
 
+                
               </div>
+
+
+
+
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample<%= index %>"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -307,6 +316,8 @@
       </div>
    
       </div>
+
+
 
 </body>
 

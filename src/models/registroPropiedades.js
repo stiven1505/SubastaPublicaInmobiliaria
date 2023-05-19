@@ -17,9 +17,11 @@ const propiedades = new Schema({
     estrato: {type: String},
     
     zonasComunes: {
-      type: [String], // tipo de campo es un arreglo de strings
-      enum: ['ascensor','azotea', 'gimnasio', 'bodega', 'lavanderia', 'piscina', 'sala reuniones', 'salon de ventas', 'zona juegos','zona de BBQ'], // opciones permitidas para el arreglo
-      default: ['Sin información'], // valor por defecto si no se selecciona ningún checkbox
+      type: [{
+        type: String,
+        enum: ['ascensor', 'azotea', 'gimnasio', 'bodega', 'lavanderia', 'piscina', 'sala reuniones', 'salon de ventas', 'zona juegos', 'zona de BBQ', 'Sin información']
+      }],
+      default: ['Sin información']
     },
 
     descripcion: {type: String},

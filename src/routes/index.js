@@ -47,13 +47,10 @@ router.post('/registro/usuario',registroUsuario)
 
 router.post('/busqueda/propiedades',pageBusquedaPropiedades)
 
-// Renderizar la vista de conversión de moneda
 router.get('/convertidor',pageConvertidor);
 
-  router.post('/convertir', convertirMoneda);
+router.post('/convertir', convertirMoneda);
 
-
-  // Renderizar la vista de conversión de moneda
 router.get('/simuladorCredito',pageConvertidor);
 
 router.post('/simuladorCredito', simuladorCredito);
