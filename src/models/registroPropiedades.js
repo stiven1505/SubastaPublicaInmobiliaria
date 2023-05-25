@@ -3,7 +3,8 @@ import mongoose, { Schema, model } from 'mongoose';
 const propiedades = new Schema({
 
   /*Datos para vista publica*/
-   
+    estado:{type:String},
+    tipo:{type:String},
     titulo:{type:String},
     departamento: {type: String},
     ciudad: {type: String},

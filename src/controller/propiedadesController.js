@@ -8,15 +8,32 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-
+// listar Propiedades disponibles para la venta
 export const pagePropiedadesDisponibles =  async (req,res)=>{
     //consulta en mongoDB para mostrar resultados
-    const propiedad = await Propiedades.find().sort({created_at: -1});
+    const propiedad = await Propiedades.find({ tipo : "Propiedad en venta", estado : "Activo"}).sort({created_at: -1});
    
     
     res.render('propiedadesDisponibles',{propiedad,title:'SPI - Propiedades Disponibles'})
 };
 
+// listar Propiedades disponibles para la venta
+export const pagePropiedadesDisponiblesSubasta =  async (req,res)=>{
+    //consulta en mongoDB para mostrar resultados
+    const propiedad = await Propiedades.find({ tipo : "Propiedad en subasta", estado : "Activo"}).sort({created_at: -1});
+   
+    
+    res.render('propiedadesDisponiblesSubasta',{propiedad,title:'SPI - Propiedades Disponibles'})
+};
+
+// listar Propiedades disponibles para la venta
+export const pagePropiedadesDisponiblesPermuta =  async (req,res)=>{
+    //consulta en mongoDB para mostrar resultados
+    const propiedad = await Propiedades.find({ tipo : "Propiedad en permuta", estado : "Activo"}).sort({created_at: -1});
+   
+    
+    res.render('propiedadesDisponiblesPermuta',{propiedad,title:'SPI - Propiedades Disponibles'})
+};
 
 export const pageBusquedaPropiedades=  async (req,res)=>{
     //consulta en mongoDB para mostrar resultados
@@ -83,6 +100,7 @@ export const  agregarPropiedades = async(req,res)=>{
 
             const newPropiedad =  new Propiedades({
             /*Datos para vista publica*/
+            tipo : datos.tipo ,
             titulo : datos.titulo ,
             departamento : datos.departamento , 
             ciudad :  datos.ciudad ,
@@ -118,3 +136,41 @@ export const  agregarPropiedades = async(req,res)=>{
                 }
             }
 
+
+
+            export const eliminarPropiedad = async(req,res)=>{
+                const { id } = req.params;
+            
+                await Propiedades.findByIdAndDelete(id)
+            
+                res.redirect("/formularioPropiedades")
+            };
+
+
+
+            export const actualizarPropiedadPost = async (req, res) => {
+
+                try {
+                    const {id}= req.params //id que se va actualizar
+                   await Propiedades.findByIdAndUpdate(id, req.body)
+            
+                    res.redirect("/formularioPropiedades")
+                } catch (error) {
+                    console.log(error)
+                }
+            
+            
+            }
+            
+            export const actualizarPropiedadGet = async(req, res) => {
+            
+                try {
+                    const propiedadActualizado = await Propiedades.findById(req.params.id).lean()//lean vuelve un obj de js
+                res.render('actualizar', {propiedadActualizado});
+            
+                } catch (error) {
+                    console.log(error.message)
+                }
+                
+            
+            }

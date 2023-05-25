@@ -11,8 +11,13 @@ pageFormularioPropiedades
 
 import {
 pagePropiedadesDisponibles,
+pagePropiedadesDisponiblesPermuta,
+pagePropiedadesDisponiblesSubasta,
 pageBusquedaPropiedades,
-agregarPropiedades
+agregarPropiedades,
+eliminarPropiedad,
+actualizarPropiedadGet,
+actualizarPropiedadPost
 } from '../controller/propiedadesController.js';
 
 import {
@@ -23,7 +28,7 @@ import {
  simuladorCredito,
  convertirMoneda,
  pageConvertidor,
- pageSimulador
+pageSimulador
 } from '../controller/convertidor-simulador.js'
 
 
@@ -35,11 +40,23 @@ router.get('/acercaNosotros',pageAcercaNosotros)
 
 router.get('/propiedadesDisponibles',pagePropiedadesDisponibles )
 
+router.get('/propiedadesDisponiblesSubasta',pagePropiedadesDisponiblesSubasta )
+
+router.get('/propiedadesDisponiblesPermuta',pagePropiedadesDisponiblesPermuta )
+
 router.get('/preguntasFrecuentes',pagePreguntasFrecuentes)
 
 router.get('/contactanos',pageContacto)
 
 router.get('/formularioPropiedades', pageFormularioPropiedades)
+
+router.get('/eliminar/:id', eliminarPropiedad)
+
+router.get('/actualizar/:id', actualizarPropiedadGet)
+
+router.get('/convertidor',pageConvertidor);
+
+router.get('/simuladorCredito',pageSimulador);
 
 router.post('/agregar/propiedades',agregarPropiedades)
 
@@ -47,12 +64,12 @@ router.post('/registro/usuario',registroUsuario)
 
 router.post('/busqueda/propiedades',pageBusquedaPropiedades)
 
-router.get('/convertidor',pageConvertidor);
-
 router.post('/convertir', convertirMoneda);
 
-router.get('/simuladorCredito',pageConvertidor);
-
 router.post('/simuladorCredito', simuladorCredito);
+
+router.post('/actualizar/:id', actualizarPropiedadPost);
+
+
 
 export default router;

@@ -1,0 +1,293 @@
+<div class="row tarjeta">
+
+    <% propiedad.forEach(function(datosPropiedad, index) { %>
+      <div class="col-md-5 col-lg-4">
+        <div class="card" style="margin-top:2rem;">
+
+
+          <div id="carouselExample<%= index %>" class="carousel slide">
+
+            <div class="carousel-inner">
+              <% datosPropiedad.image.forEach(function(imagen, index) { %>
+                <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+                  <a data-fancybox="carousel" href="<%= imagen.url %>" data-caption="<%=datosPropiedad.titulo %>, <%=datosPropiedad.ciudad %> - <%=datosPropiedad.barrio %>, Area <%=datosPropiedad.area %>, Precio: $<%=datosPropiedad.precio .toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); %> ">
+                    <img src="<%= imagen.url %>" class="d-block w-100" alt="..." style="height: 17rem;">
+                  </a>
+                </div>
+              <% }); %>
+
+
+            </div>
+
+
+
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample<%= index %>"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample<%= index %>"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="card-body cardPropiedades">
+          <table class="table" style="line-height:1">
+            <tr style="text-align: center; margin-top: 2rem;">
+              <th colspan="6">
+                <%= datosPropiedad.titulo %>
+              </th>
+
+            </tr>
+
+            <tr>
+              <td scope="col" colspan="4">
+
+                <p id="datosUbicacion">
+                  <%= datosPropiedad.ciudad%> - <%= datosPropiedad.barrio%>
+                </p>
+                <p id="datosUbicacion-area">
+                  <%= datosPropiedad.area %> m²
+                </p>
+              </td>
+
+            </tr>
+            <tr style="text-align: center;">
+              <td scope="row">
+                Hab <%= datosPropiedad.habitaciones %>
+              </td>
+
+              <td scope="row">
+                Baño <%= datosPropiedad.banos %>
+              </td>
+
+              <td scope="row">
+                Parq <%= datosPropiedad.parqueadero %>
+              </td>
+
+
+            </tr>
+            <tr>
+
+
+
+
+
+              <td colspan="6">
+
+                <div class="accordion accordion-flush " id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed prueba" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse<%= index %>" aria-expanded="false"
+                        aria-controls="flush-collapse<%= index %>" style="border-top-left-radius: 10px !important; border-top-right-radius: 10px !important;
+                      ">
+                        Zonas Comunes
+                      </button>
+                    </h2>
+                    <div id="flush-collapse<%= index %>" class="accordion-collapse collapse"
+                      data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div>
+                          <% var counter=0; datosPropiedad.zonasComunes.forEach(function(zonaComun) { if (counter %
+                            2===0) { %>
+                            <div class="row">
+                              <% } %>
+                                <div class="col-md-6">
+                                  <p class="text-break">
+                                    <% switch(zonaComun) { case "ascensor" : %><span
+                                        class="material-symbols-outlined">
+                                        elevator
+                                      </span> Ascensor<% break; case "azotea" : %><span
+                                          class="material-symbols-outlined">
+                                          deck
+                                        </span> Azotea <% break; case "gimnasio" : %> <span
+                                            class="material-symbols-outlined">
+                                            fitness_center
+                                          </span> Gimnasio<% break; case "sala reuniones" : %><span
+                                              class="material-symbols-outlined">
+                                              groups_2
+                                            </span> Sala reuniones <% break; case "lavanderia" : %> <span
+                                                class="material-symbols-outlined">
+                                                local_laundry_service
+                                              </span> Lavanderia <% break; case "piscina" : %><span
+                                                  class="material-symbols-outlined">
+                                                  pool
+                                                </span> Piscina <% break; case "salon de eventos" : %><span
+                                                    class="material-symbols-outlined">
+                                                    stadium
+                                                  </span> Salon de eventos <% break; case "zona juegos" : %><span
+                                                      class="material-symbols-outlined">
+                                                      stadia_controller
+                                                    </span> Zona juegos <% break; case "bodega" : %><span
+                                                        class="material-symbols-outlined">
+                                                        garage_home
+                                                      </span> Bodega <% break; case "zona de BBQ " : %><span
+                                                          class="material-symbols-outlined">
+                                                          outdoor_grill
+                                                        </span> Zona de BBQ <% break; default: zonaComun } %>
+                                  </p>
+                                </div>
+                                <% if (counter % 2===1) { %>
+                            </div>
+                            <% } %>
+                              <% counter++; %>
+                                <% }); %>
+                                  <% if (counter % 2===1) { %>
+                        </div>
+                        <% } %>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed prueba" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapse<%= index %>" aria-expanded="false"
+                      aria-controls="flush-collapse<%= index %>"
+                      style=" border-bottom-left-radius: 10px !important; border-bottom-right-radius: 10px !important;">
+                      Descripción
+                    </button>
+
+                  </h2>
+                  <div id="flush-collapse<%= index %>" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <div>
+                        <p class="text-break" align="justify">
+                          <%= datosPropiedad.descripcion %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+        </td>
+        </tr>
+        </table>
+        <div class="container ">
+          <div class="row flex flex-row justify-content-center">
+            <div class="col">
+              <!--<a href="https://api.whatsapp.com/send?phone=+573136696968&text=¡Hola!%20Me%20interesa%20la%20propiedad%20<%= datosPropiedad.titulo %>:%0A%0A
+                              Ciudad:%20<%= encodeURIComponent(datosPropiedad.ciudad) %>%0A
+                              Barrio:%20<%= encodeURIComponent(datosPropiedad.barrio) %>%0A
+                              Estrato:%20<%= datosPropiedad.estrato %>%0A
+                              Habitaciones:%20<%= datosPropiedad.habitaciones %>%0A
+                              Área:%20<%= datosPropiedad.area %>%0A
+                              Precio:%20<%= datosPropiedad.precio %>%0A%0A
+                              .Para%20más%20información,%20el%20ID%20de%20la%20propiedad%20es%20<%= datosPropiedad._id %>."
+                class="btn btn-success btnInteresado" style="background-color: #043343;">Me interesa</a>-->
+
+              <!-- Button trigger modal -->
+              <button
+                style="Margin-top:-1rem;font-size: 14px;background-color: #ed9b0b!important;color: black;--bs-btn-border-color: none"
+                type="button" class="btn btn-success" data-bs-toggle="modal"
+                data-bs-target="#exampleModal<%= index %>">
+                Contacto
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal<%= index %>" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true" style="top:4rem">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Regístrate para mas información</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                      <img
+                        src="https://res.cloudinary.com/drs3a5h1s/image/upload/v1681482962/Pagina%20SPI/logoPrincipal_cwwd6x.png"
+                        class="img-fluid" alt="..." style="margin-bottom: 0rem;">
+
+
+
+                      <div id="carouselExample1<%= index %>" class="carousel slide">
+
+                        <div class="carousel-inner">
+                          <% datosPropiedad.image.forEach(function(imagen, i) { %>
+                            <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+                              <img src="<%= imagen.url %>" class="d-block w-100" alt="...">
+                            </div>
+                            <% }); %>
+
+                        </div>
+                        <button class="carousel-control-prev" type="button"
+                          data-bs-target="#carouselExample1<%= index %>" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button"
+                          data-bs-target="#carouselExample1<%= index %>" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+
+                      <form action="/registro/usuario" method="post" enctype="multipart/form-data">
+
+                        <div class="form- camposModal">
+                          <input type="text" name="nombreInteresado" placeholder="Nombre completo"
+                            class="form-control">
+                        </div>
+                        <div class="form- camposModal">
+                          <input type="email" name="correoInteresado" placeholder="Correo electrónico"
+                            class="form-control">
+                        </div>
+                        <div class="form- camposModal">
+                          <input type="number" name="celularInteresado" placeholder="Número de celular"
+                            class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <p> <br>
+
+                            <%= datosPropiedad.titulo %> ubicado en la ciudad de <%= datosPropiedad.ciudad %>, con una
+                                Área cuadrada de <%= datosPropiedad.area %>.
+                          </p>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="hidden" name="codigoPropiedadInteres" value="<%= datosPropiedad._id %>"
+                            class="form-control" readonly>
+                        </div>
+                    </div>
+                    <div class="modal-footer botonEnviar">
+
+                      <button class="btn btn-success btn-block">Enviar</button>
+                    </div>
+                    </form>
+
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col text-right">
+              <p class="precio">
+                $ <%= datosPropiedad.precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); %>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </div>
+  <% }); %>
+    </div>
+    </div>
+    </div>
+ 
+    </div>

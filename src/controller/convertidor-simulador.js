@@ -55,5 +55,5 @@ export const convertirMoneda =  async (req, res) => {
   export const pageConvertidor = (req,res)=>res.render('convertidor',{title:'SPI - Convertidor'})
 
   export const pageSimulador = (req, res) => {
-    res.render('simuladorCredito');
+ res.render('simuladorCredito');
   }

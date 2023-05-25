@@ -1,0 +1,34 @@
+<table class="table tableCrud">
+  <thead>
+    <tr class="trCrud">
+      <th scope="col">Id</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Ciudad</th>
+      <th scope="col">Area</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Precio</th>
+    </tr>
+  </thead>
+  <% propiedadListado.forEach(function(propiedad) { %>
+  <tbody>
+    <tr class="trCrud">
+        
+      
+      <th scope="row"><%= propiedad._id %></th>
+      <td><%= propiedad.tipo %></td>
+      <th scope="row"><%= propiedad.titulo %></th>
+      <td><%= propiedad.estado %></td>
+      <td><%= propiedad.ciudad %></td>
+      <td><%= propiedad.area %></td>
+      <td><%= propiedad.precio %></td>
+      <td><%= propiedad.precio %></td>
+      <td><a href="/actualizar/<%= propiedad._id%>" class="btnActualizacion">Actualizar</a></td>
+
+      <td><a href="/eliminar/<%= propiedad._id%>" class="btnEliminar">Eliminar</a></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+

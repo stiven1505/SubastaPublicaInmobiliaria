@@ -18,8 +18,17 @@
 }
 
 
-
-
+.slogan{
+    font-family: Texto;
+    color: #c7ad7f;
+    margin-top: 2rem;
+    font-size: 1.9rem;
+}
+.contSlogan{
+    background-color: #043343;
+   
+    max-width: 100%;
+}
 /*--------------Responsive-------------*/
 
 @media screen and (max-width:1400px) {

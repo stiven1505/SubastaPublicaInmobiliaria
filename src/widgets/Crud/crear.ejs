@@ -1,0 +1,291 @@
+<div class="d-flex flex-row">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h3>Formulario Propiedades</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/agregar/propiedades" method="POST" enctype="multipart/form-data">
+                        <div class="input-group mb-3" style="justify-content: center;">
+
+
+                            <div class="form-group">
+                                <div style="position: relative;">
+                                    <input type="file" name="image" class="form-control-file inputImage"
+                                        id="exampleFormControlFile1" multiple>
+                                    <div class="divImage"></div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <select class="form-select" aria-label="Default select example" id="inputCiudadLine2"
+                                name="estado">
+                                <option selected>Estado de publicación</option>
+                                <option value="Activo">Activo</option>
+                                <option value="Desactivado">Desactivado</option>
+                                
+                            </select>
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <select class="form-select" aria-label="Default select example" id="inputCiudadLine2"
+                                name="tipo">
+                                <option selected>Tipo de propiedad</option>
+                                <option value="Propiedades en venta">Propiedades en venta</option>
+                                <option value="Propiedades en subasta">Propiedades en subasta</option>
+                                <option value="Propiedades en permuta">Propiedades en permuta</option>
+                              
+                            </select>
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <select class="form-select" aria-label="Default select example" id="inputCiudadLine2"
+                                name="titulo">
+                                <option selected>Tipo de inmueble </option>
+                                <option value="Apartamento ">Apartamento </option>
+                                <option value="Casa ">Casa </option>
+                                <option value="Oficina ">Oficina </option>
+                                <option value="Local ">Local </option>
+                                <option value="Bodegas ">Bodegas </option>
+                                <option value="Lote ">Lote </option>
+                                <option value="Fincas ">Fincas </option>
+                                <option value="Edif. oficinas ">Edif. oficinas </option>
+                                <option value="Consultorios ">Consultorios </option>
+                                <option value="Edif. Apartamentos ">Edif. Apartamentos </option>
+                                <option value="Casa condominio ">Casa condominio </option>
+                                <option value="Lote condominio ">Lote condominio </option>
+                                <option value="Parcelacion zona industrial">Parcelacion zona industrial</option>
+                            </select>
+                        </div>
+
+                        <div class=" camposFormulario">
+
+                            <select class="form-select" aria-label="Default select example"
+                                id="inputDepartamentoLine2" name="departamento">
+                                <option selected>Departamento</option>
+                                <option value="amazonas">Amazonas</option>
+                                <option value="antioquia">Antioquia</option>
+                                <option value="arauca">Arauca</option>
+                                <option value="atlantico">Atlántico</option>
+                                <option value="bolivar">Bolívar</option>
+                                <option value="boyaca">Boyacá</option>
+                                <option value="caldas">Caldas</option>
+                                <option value="caqueta">Caquetá</option>
+                                <option value="casanare">Casanare</option>
+                                <option value="cauca">Cauca</option>
+                                <option value="cesar">Cesar</option>
+                                <option value="choco">Chocó</option>
+                                <option value="cordoba">Córdoba</option>
+                                <option value="cundinamarca">Cundinamarca</option>
+                                <option value="guainia">Guainía</option>
+                                <option value="guaviare">Guaviare</option>
+                                <option value="huila">Huila</option>
+                                <option value="guajira">La Guajira</option>
+                                <option value="magdalena">Magdalena</option>
+                                <option value="meta">Meta</option>
+                                <option value="narino">Nariño</option>
+                                <option value="norteSantander">Norte de Santander</option>
+                                <option value="putumayo">Putumayo</option>
+                                <option value="quindio">Quindío</option>
+                                <option value="risaralda">Risaralda</option>
+                                <option value="sanAndres">San Andrés y Providencia</option>
+                                <option value="santander">Santander</option>
+                                <option value="sucre">Sucre</option>
+                                <option value="tolima">Tolima</option>
+                                <option value="valleCauca">Valle del Cauca</option>
+                                <option value="vaupes">Vaupés</option>
+                                <option value="vichada">Vichada</option>
+                            </select>
+                        </div>
+
+
+                        <div class=" camposFormulario">
+
+                            <select class="form-select" aria-label="Default select example" id="inputCiudadLine2"
+                                name="ciudad">
+                                <option selected>Ciudad</option>
+                                <option value="Arauca">Arauca</option>
+                                <option value="Armenia">Armenia</option>
+                                <option value="Barranquilla">Barranquilla</option>
+                                <option value="Bogotá">Bogotá</option>
+                                <option value="Bucaramanga">Bucaramanga</option>
+                                <option value="Cali">Cali</option>
+                                <option value="Cartagena">Cartagena</option>
+                                <option value="Cúcuta">Cúcuta</option>
+                                <option value="Dagua">Dagua</option>
+                                <option value="Florencia">Florencia</option>
+                                <option value="Ibagué">Ibagué</option>
+                                <option value="Leticia">Leticia</option>
+                                <option value="Manizales">Manizales</option>
+                                <option value="Medellín">Medellín</option>
+                                <option value="Mitú">Mitú</option>
+                                <option value="Mocoa">Mocoa</option>
+                                <option value="Montería">Montería</option>
+                                <option value="Neiva">Neiva</option>
+                                <option value="Palmira">Palmira</option>
+                                <option value="Pasto">Pasto</option>
+                                <option value="Pereira">Pereira</option>
+                                <option value="Popayán">Popayán</option>
+                                <option value="Puerto Carreño">Puerto Carreño</option>
+                                <option value="Puerto Inírida">Puerto Inírida</option>
+                                <option value="Quibdó">Quibdó</option>
+                                <option value="Riohacha">Riohacha</option>
+                                <option value="San Andrés">San Andrés</option>
+                                <option value="San José del Guaviare">San José del Guaviare</option>
+                                <option value="Santa Marta">Santa Marta</option>
+                                <option value="Sincelejo">Sincelejo</option>
+                                <option value="Tunja">Tunja</option>
+                                <option value="Valledupar">Valledupar</option>
+                                <option value="Villavicencio">Villavicencio</option>
+                                <option value="Yopal">Yopal</option>
+                            </select>
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <input type="text" maxlength="30" name="direccion" placeholder="Direccion"
+                                class="form-control">
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <input type="text" maxlength="12" name="barrio" placeholder="Barrio"
+                                class="form-control">
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <input type="number" name="precio" placeholder="Precio" class="form-control">
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <input step="0.01" min="0" type="number" name="area" placeholder="Área m²"
+                                class="form-control">
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <input type="number" name="habitaciones" placeholder="Habitaciones"
+                                class="form-control">
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <input type="number" name="banos" placeholder="Baños" class="form-control">
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <input type="number" name="parqueadero" placeholder="Parqueadero" class="form-control">
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <input type="number" name="estrato" placeholder="Estrato" class="form-control">
+                        </div>
+
+                        <div class=" camposFormulario">Zonas comunes </div>
+                        <div class=" camposFormulario">
+                            <div class="form-check form-check-inline">
+                                <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="ascensor"
+                                    value="ascensor">
+                                <label class="form-check-label" for="ascensor">Ascensor</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="azotea"
+                                    value="azotea">
+                                <label class="form-check-label" for="azotea">Azotea</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="gimnasio"
+                                    value="gimnasio">
+                                <label class="form-check-label" for="gimnasio">Gimnasio</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="bodega"
+                                    value="bodega">
+                                <label class="form-check-label" for="bodega">Bodega</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input name="zonasComunes[]" class="form-check-input" type="checkbox"
+                                    id="lavanderia" value="lavanderia">
+                                <label class="form-check-label" for="lavanderia">Lavanderia</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="zonasComunes[]" class="form-check-input" type="checkbox" id="piscina"
+                                    value="piscina">
+                                <label class="form-check-label" for="piscina">Piscina</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="zonasComunes[]" class="form-check-input" type="checkbox"
+                                    id="sala reuniones" value="sala reuniones">
+                                <label class="form-check-label" for="sala reuniones">Sala reuniones</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="zonasComunes[]" class="form-check-input" type="checkbox"
+                                    id="salon de ventas" value="salon de ventas">
+                                <label class="form-check-label" for="salon de ventas">Salon de ventas</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="zonasComunes[]" class="form-check-input" type="checkbox"
+                                    id="zona juegos" value="zona juegos">
+                                <label class="form-check-label" for="zona juegos">Zona juegos</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input name="zonasComunes[]" class="form-check-input" type="checkbox"
+                                    id="zona de BBQ" value="zona de BBQ">
+                                <label class="form-check-label" for="zona de BBQ">Zona de BBQ</label>
+                            </div>
+
+
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <textarea maxlength="450" name="descripcion" placeholder="Descripcion"
+                                class="form-control"></textarea>
+                        </div>
+
+
+
+
+                        <div class=" camposFormulario">
+                            <input type="number" name="cedulaPropietario" placeholder="Cedula Propietario"
+                                class="form-control">
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <input type="text" name="nombrePropietario" placeholder="Nombre Propietario"
+                                class="form-control">
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <input type="number" name="telefonoPropietario" placeholder="Telefono Propietario"
+                                class="form-control">
+                        </div>
+
+                        <div class=" camposFormulario">
+                            <input type="email" name="correoPropietario" placeholder="Correo Propietario"
+                                class="form-control">
+                        </div> <br><br>
+
+
+
+
+
+
+                        <div class=" camposFormulario">
+                            <button class="btn btn-success btn-block">
+                                Registrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+          
+        </div>
+        
+    </div>
+
+    <div class="row">
+
+    </div>
+</div>

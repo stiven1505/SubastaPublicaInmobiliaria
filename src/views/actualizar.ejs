@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include("../widgets/cabecera.ejs") %>
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="d-flex justify-content-center" style="margin-top: 14rem;">
+    
+    
+    <div class="col-6 actualizar">
+
+
+
+          <div class="row">
+            <div class="col-md-12 offset-md-1">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Formulario Actualizacion Propiedades</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/actualizar/<%= propiedadActualizado._id %>" method="POST">
+                            <div class=" camposFormulario">
+                                <select class="form-select" aria-label="Default select example" id="inputCiudadLine2"
+                                    name="tipo">
+                                    <option value="<%= propiedadActualizado.tipo %>"><%= propiedadActualizado.tipo %></option>
+                                    <option value="Propiedades en venta">Propiedades en venta</option>
+                                    <option value="Propiedades en subasta">Propiedades en subasta</option>
+                                    <option value="Propiedades en permuta">Propiedades en permuta</option>
+                                  
+                                </select>
+                            </div>
+                       
+                            <div class=" camposFormulario">
+                            <select class="form-select" aria-label="Default select example" id="inputCiudadLine2"
+                                name="estado">
+                                <option value="<%= propiedadActualizado.estado %>" ><%= propiedadActualizado.estado %></option>
+                                <option value="Activo">Activo</option>
+                                <option value="Desactivado">Desactivado</option>
+                                
+                            </select>
+                        </div>
+
+
+
+                        
+
+                            <div class=" camposFormulario">
+                                <select class="form-select" aria-label="Default select example" id="inputCiudadLine2"
+                                    name="titulo">
+                                    <option value="<%= propiedadActualizado.titulo %>" ><%= propiedadActualizado.titulo %></option>
+                                    <option value="Apartamento en venta">Apartamento en venta</option>
+                                    <option value="Casa en venta">Casa en venta</option>
+                                    <option value="Oficina en venta">Oficina en venta</option>
+                                    <option value="Local en venta">Local en venta</option>
+                                    <option value="Bodegas en venta">Bodegas en venta</option>
+                                    <option value="Lote en venta">Lote en venta</option>
+                                    <option value="Fincas en venta">Fincas en venta</option>
+                                    <option value="Edif. oficinas en venta">Edif. oficinas en venta</option>
+                                    <option value="Consultorios en venta">Consultorios en venta</option>
+                                    <option value="Edif. Apartamentos en venta">Edif. Apartamentos en venta</option>
+                                    <option value="Casa condominio en venta">Casa condominio en venta</option>
+                                    <option value="Lote condominio en venta">Lote condominio en venta</option>
+                                    <option value="Parcelacion zona industrial">Parcelacion zona industrial</option>
+                                </select>
+                            </div>
+
+                            <div class=" camposFormulario">
+
+                                <select class="form-select" aria-label="Default select example" id="inputCiudadLine2"
+                                    name="ciudad">
+                                    <option value="<%= propiedadActualizado.ciudad%>"><%= propiedadActualizado.ciudad%></option>
+                                    <option value="Arauca">Arauca</option>
+                                    <option value="Armenia">Armenia</option>
+                                    <option value="Barranquilla">Barranquilla</option>
+                                    <option value="Bogotá">Bogotá</option>
+                                    <option value="Bucaramanga">Bucaramanga</option>
+                                    <option value="Cali">Cali</option>
+                                    <option value="Cartagena">Cartagena</option>
+                                    <option value="Cúcuta">Cúcuta</option>
+                                    <option value="Dagua">Dagua</option>
+                                    <option value="Florencia">Florencia</option>
+                                    <option value="Ibagué">Ibagué</option>
+                                    <option value="Leticia">Leticia</option>
+                                    <option value="Manizales">Manizales</option>
+                                    <option value="Medellín">Medellín</option>
+                                    <option value="Mitú">Mitú</option>
+                                    <option value="Mocoa">Mocoa</option>
+                                    <option value="Montería">Montería</option>
+                                    <option value="Neiva">Neiva</option>
+                                    <option value="Palmira">Palmira</option>
+                                    <option value="Pasto">Pasto</option>
+                                    <option value="Pereira">Pereira</option>
+                                    <option value="Popayán">Popayán</option>
+                                    <option value="Puerto Carreño">Puerto Carreño</option>
+                                    <option value="Puerto Inírida">Puerto Inírida</option>
+                                    <option value="Quibdó">Quibdó</option>
+                                    <option value="Riohacha">Riohacha</option>
+                                    <option value="San Andrés">San Andrés</option>
+                                    <option value="San José del Guaviare">San José del Guaviare</option>
+                                    <option value="Santa Marta">Santa Marta</option>
+                                    <option value="Sincelejo">Sincelejo</option>
+                                    <option value="Tunja">Tunja</option>
+                                    <option value="Valledupar">Valledupar</option>
+                                    <option value="Villavicencio">Villavicencio</option>
+                                    <option value="Yopal">Yopal</option>
+                                </select>
+                            </div>
+
+                            <div class=" camposFormulario">
+                                <input type="text" maxlength="30" name="direccion" placeholder="Direccion"
+                                    class="form-control" value="<%= propiedadActualizado.direccion%>" >
+                            </div>
+
+                            <div class=" camposFormulario">
+                                <input type="text" maxlength="12" name="barrio" placeholder="Barrio"
+                                    class="form-control" value="<%= propiedadActualizado.barrio%>">
+                            </div>
+
+                            <div class=" camposFormulario">
+                                <input type="number" name="precio" placeholder="Precio" class="form-control" value="<%= propiedadActualizado.precio%>">
+                            </div>
+
+                            <div class=" camposFormulario">
+                                <input step="0.01" min="0" type="number" name="area" placeholder="Área m²"
+                                    class="form-control" value="<%= propiedadActualizado.area%>">
+                            </div>
+
+                            <div class=" camposFormulario">
+                                <input type="number" name="habitaciones" placeholder="Habitaciones"
+                                    class="form-control" value="<%= propiedadActualizado.habitaciones%>">
+                            </div>
+
+                            <div class=" camposFormulario">
+                                <input type="number" name="banos" placeholder="Baños" class="form-control" value="<%= propiedadActualizado.banos%>">
+                            </div>
+
+                            <div class=" camposFormulario">
+                                <input type="number" name="parqueadero" placeholder="Parqueadero" class="form-control" value="<%= propiedadActualizado.parqueadero%>">
+                            </div>
+
+                            <div class=" camposFormulario">
+                                <input type="number" name="estrato" placeholder="Estrato" class="form-control" value="<%= propiedadActualizado.estrato%>">
+                            </div>
+
+                            
+
+                            <div class=" camposFormulario">
+                                <textarea  name="descripcion" placeholder="Descripcion"
+                                    class="form-control"><%= propiedadActualizado.descripcion%></textarea>
+                            </div>
+                            <br><br>
+
+
+
+
+                           
+
+
+
+                            <div class="text-center">
+                                <button type="submit" class="btnActualizar btn btn-success text-center">ACTUALIZAR</button></div>
+                              </div>
+                        </form>
+                    </div>
+                </div>
+              
+            </div>
+            
+        </div>
+
+
+      
+        
+      
+
+    </div>
+    
+
+    
+  </div>
+  <%- include("../widgets/body")%>
+</body>
+</html>

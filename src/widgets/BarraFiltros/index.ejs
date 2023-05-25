@@ -1,8 +1,8 @@
 <form action="/busqueda/propiedades" method="POST" enctype="multipart/form-data" class="form-inline ubicacion">
-    
-   
+
+
     <div class="form-group filtro tipoFiltro">
-       
+
         <select class="form-select" aria-label="Default select example" id="inputCiudadLine2" name="titulo" required>
             <option value="">Tipo de inmueble</option>
             <option value="Apartamento en venta">Apartamento en venta</option>
@@ -10,12 +10,14 @@
             <option value="Oficina en venta">Oficina en venta</option>
             <option value="Local en venta">Local en venta</option>
             <option value="Bodegas en venta">Bodegas en venta</option>
-            <option value="Lotes en venta">Lotes en venta</option>
+            <option value="Lote en venta">Lote en venta</option>
             <option value="Fincas en venta">Fincas en venta</option>
             <option value="Edif. oficinas en venta">Edif. oficinas en venta</option>
             <option value="Consultorios en venta">Consultorios en venta</option>
             <option value="Edif. Apartamentos en venta">Edif. Apartamentos en venta</option>
-            <option value="Condominio en venta">Condominio en venta</option>
+            <option value="Casa condominio en venta">Casa condominio en venta</option>
+            <option value="Lote condominio en venta">Lote condominio en venta</option>
+            <option value="Parcelacion zona industrial">Parcelacion zona industrial</option>
 
         </select>
     </div>
@@ -64,67 +66,68 @@
 
     <div class="form-group filtro ciudadFiltro">
 
-        <select class="form-select" aria-label="Default select example" id="inputDepartamentoLine2"
-        name="departamento">
-        <option selected>Departamento</option>
-        <option value="amazonas">Amazonas</option>
-        <option value="antioquia">Antioquia</option>
-        <option value="arauca">Arauca</option>
-        <option value="atlantico">Atlántico</option>
-        <option value="bolivar">Bolívar</option>
-        <option value="boyaca">Boyacá</option>
-        <option value="caldas">Caldas</option>
-        <option value="caqueta">Caquetá</option>
-        <option value="casanare">Casanare</option>
-        <option value="cauca">Cauca</option>
-        <option value="cesar">Cesar</option>
-        <option value="choco">Chocó</option>
-        <option value="cordoba">Córdoba</option>
-        <option value="cundinamarca">Cundinamarca</option>
-        <option value="guainia">Guainía</option>
-        <option value="guaviare">Guaviare</option>
-        <option value="huila">Huila</option>
-        <option value="guajira">La Guajira</option>
-        <option value="magdalena">Magdalena</option>
-        <option value="meta">Meta</option>
-        <option value="narino">Nariño</option>
-        <option value="norteSantander">Norte de Santander</option>
-        <option value="putumayo">Putumayo</option>
-        <option value="quindio">Quindío</option>
-        <option value="risaralda">Risaralda</option>
-        <option value="sanAndres">San Andrés y Providencia</option>
-        <option value="santander">Santander</option>
-        <option value="sucre">Sucre</option>
-        <option value="tolima">Tolima</option>
-        <option value="valleCauca">Valle del Cauca</option>
-        <option value="vaupes">Vaupés</option>
-        <option value="vichada">Vichada</option>
-    </select>
+        <select class="form-select" aria-label="Default select example" id="inputDepartamentoLine2" name="departamento">
+            <option selected>Departamento</option>
+            <option value="amazonas">Amazonas</option>
+            <option value="antioquia">Antioquia</option>
+            <option value="arauca">Arauca</option>
+            <option value="atlantico">Atlántico</option>
+            <option value="bolivar">Bolívar</option>
+            <option value="boyaca">Boyacá</option>
+            <option value="caldas">Caldas</option>
+            <option value="caqueta">Caquetá</option>
+            <option value="casanare">Casanare</option>
+            <option value="cauca">Cauca</option>
+            <option value="cesar">Cesar</option>
+            <option value="choco">Chocó</option>
+            <option value="cordoba">Córdoba</option>
+            <option value="cundinamarca">Cundinamarca</option>
+            <option value="guainia">Guainía</option>
+            <option value="guaviare">Guaviare</option>
+            <option value="huila">Huila</option>
+            <option value="guajira">La Guajira</option>
+            <option value="magdalena">Magdalena</option>
+            <option value="meta">Meta</option>
+            <option value="narino">Nariño</option>
+            <option value="norteSantander">Norte de Santander</option>
+            <option value="putumayo">Putumayo</option>
+            <option value="quindio">Quindío</option>
+            <option value="risaralda">Risaralda</option>
+            <option value="sanAndres">San Andrés y Providencia</option>
+            <option value="santander">Santander</option>
+            <option value="sucre">Sucre</option>
+            <option value="tolima">Tolima</option>
+            <option value="valleCauca">Valle del Cauca</option>
+            <option value="vaupes">Vaupés</option>
+            <option value="vichada">Vichada</option>
+        </select>
     </div>
-   
+
     <div class="form-group filtro filtroPrecio ">
         <p class="text-sm my-2 mx-4 mx-md-2 mx-lg-0">Rango de Precio</p>
-    <div class="form-group filtro precioFiltro">
+        <div class="form-group filtro precioFiltro">
 
-        <input type="number" name="precioMax" id="precioMax" placeholder="Max" class="form-control" required >
-    </div>
+            <input type="number" name="precioMax" id="precioMax" placeholder="Max" class="form-control" required>
+        </div>
 
-    <div class="form-group filtro precioFiltro ">
-        <input type="number" name="precioMin" id="precioMin" placeholder="Min" class="form-control" required>
-    </div>
+        <div class="form-group filtro precioFiltro ">
+            <input type="number" name="precioMin" id="precioMin" placeholder="Min" class="form-control" required>
+        </div>
 
 
     </div>
 
     <div class="form-group filtro filtroArea">
         <p class="text-sm my-2 mx-4 mx-md-2 mx-lg-0">Rango Área</p>
-    <div class="form-group filtro areaFiltro">
-        <input step="0.01" min="0" type="number" name="areaMax" id="areaMax" placeholder="Max" class="form-control" required>
-    </div>
+        <div class="form-group filtro areaFiltro">
+            <input step="0.01" min="0" type="number" name="areaMax" id="areaMax" placeholder="Max" class="form-control"
+                required>
+        </div>
 
-    <div class="form-group filtro areaFiltro">
-        <input step="0.01" min="0" type="number" name="areaMin" id="areaMin" placeholder="Min" class="form-control" required>
-    </div>
+        <div class="form-group filtro areaFiltro">
+            <input step="0.01" min="0" type="number" name="areaMin" id="areaMin" placeholder="Min" class="form-control"
+                required>
+        </div>
     </div>
 
     <div class="form-group filtro botonesFiltro">
@@ -138,14 +141,7 @@
                 autorenew
             </span></button>
 
-        
+
     </div>
 
 </form>
-
-
-
-
-
-
-
