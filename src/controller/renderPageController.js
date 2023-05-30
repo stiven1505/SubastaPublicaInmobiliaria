@@ -1,4 +1,6 @@
-import Propiedad from '../models/registroPropiedades.js'
+import Propiedad from '../models/registroPropiedades.js';
+import dotenv from 'dotenv';// lee el archivo .env y la hace disponible entodo el proyecto
+dotenv.config();
 
 
 
@@ -12,11 +14,22 @@ export const pageContacto =  (req,res)=>res.render('contactanos',{title:'SPI - C
 
 export const  pageFormularioPropiedades =  async (req, res) => {
 
-    const propiedadListado = await Propiedad.find().lean()//devuelve una lista de objetos tipica  con lean
+    const clientIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const devIP = req.ip;
+   
 
-    res.render('formularioPropiedades', { propiedadListado: propiedadListado });
+    // Verificar si la dirección IP es la permitida
+    if (clientIP === process.env.IP_ADMIN || devIP === process.env.IP_DEV) {
+      
+      const propiedadListado = await Propiedad.find().lean()//devuelve una lista de objetos tipica  con lean
 
-};
+      res.render('formularioPropiedades', { propiedadListado: propiedadListado });
+  
+
+    } else {
+      res.status(403).send('Acceso denegado');
+    }
+  };
 
 
 

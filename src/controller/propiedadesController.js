@@ -101,6 +101,7 @@ export const  agregarPropiedades = async(req,res)=>{
             const newPropiedad =  new Propiedades({
             /*Datos para vista publica*/
             tipo : datos.tipo ,
+            estado : datos.estado,
             titulo : datos.titulo ,
             departamento : datos.departamento , 
             ciudad :  datos.ciudad ,
@@ -174,3 +175,4 @@ export const  agregarPropiedades = async(req,res)=>{
                 
             
             }
+
